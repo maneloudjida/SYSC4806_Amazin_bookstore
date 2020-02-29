@@ -1,33 +1,35 @@
-public class book {
+package entity;
 
-    private Long id;
+public class Book {
+
+    private String id;
     private String name;
     private String description;
     private String ISBN;
     private String picture;
     private String author;
     private String publisher;
-    private int iventory;
+    private int inventory;
     private double cost;
 
 
-    public book(Long id, String name, String description, String iSBN, String picture, String author, String publisher,
-                int iventory, double cost) {
+    public Book(String id, String name, String description, String ISBN, String picture, String author, String publisher,
+                int inventory, double cost) {
         super();
         this.id = id;
         this.name = name;
         this.description = description;
-        ISBN = iSBN;
+        this.ISBN = ISBN;
         this.picture = picture;
         this.author = author;
         this.publisher = publisher;
-        this.iventory = iventory;
+        this.inventory = inventory;
         this.cost = cost;
     }
 
 
 
-    public book() {
+    public Book() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,12 +47,13 @@ public class book {
         result = prime * result + (int) (temp ^ (temp >>> 32));
         result = prime * result + ((description == null) ? 0 : description.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + iventory;
+        result = prime * result + inventory;
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((picture == null) ? 0 : picture.hashCode());
         result = prime * result + ((publisher == null) ? 0 : publisher.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -59,7 +62,7 @@ public class book {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        book other = (book) obj;
+        Book other = (Book) obj;
         if (ISBN == null) {
             if (other.ISBN != null)
                 return false;
@@ -82,7 +85,7 @@ public class book {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (iventory != other.iventory)
+        if (inventory != other.inventory)
             return false;
         if (name == null) {
             if (other.name != null)
@@ -101,10 +104,10 @@ public class book {
             return false;
         return true;
     }
-    public Long getId() {
+    public String getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getName() {
@@ -143,11 +146,11 @@ public class book {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-    public int getIventory() {
-        return iventory;
+    public int getInventory() {
+        return inventory;
     }
-    public void setIventory(int iventory) {
-        this.iventory = iventory;
+    public void setInventory(int inventory) {
+        this.inventory = inventory;
     }
     public double getCost() {
         return cost;
