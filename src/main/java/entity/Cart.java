@@ -43,6 +43,7 @@ public class Cart {
          cart.addToCart(b2);
          cart.addToCart(b3);
          cart.addToCart(b4);
+
      }
 
 

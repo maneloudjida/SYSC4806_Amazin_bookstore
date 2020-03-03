@@ -10,7 +10,6 @@ public class User {
     private String email;
     private String password;
     private String passconfirm;
-
     private Role role;
 
     public User() {
@@ -87,6 +86,8 @@ public class User {
     public void setPassconfirm(String passconfirm) {
         this.passconfirm = passconfirm;
     }
+
+
     public Role getRole() { return role; }
 
     public void setRole(Role role) { this.role = role; }
