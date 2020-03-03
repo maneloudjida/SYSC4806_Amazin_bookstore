@@ -3,29 +3,30 @@ package entity;
 import java.util.Objects;
 
 public class User {
-
+    private Long iD;
     private String userId;
     private String fname;
     private String lname;
     private String email;
     private String password;
     private String passconfirm;
-    //private Role roles; create new class that has the different roles
-    //such as author, client...
 
+    private Role role;
 
     public User() {
         super();
         // TODO Auto-generated constructor stub
     }
-    public User(String userId, String fname, String lname, String email, String password, String passconfirm) {
-        super();
+
+    public User(Long iD, String userId, String fname, String lname, String email, String password, String passconfirm, Role role) {
+        this.iD = iD;
         this.userId = userId;
         this.fname = fname;
         this.lname = lname;
         this.email = email;
         this.password = password;
         this.passconfirm = passconfirm;
+        this.role = role;
     }
 
     @Override
@@ -33,19 +34,23 @@ public class User {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return Objects.equals(userId, user.userId) &&
-                Objects.equals(fname, user.fname) &&
-                Objects.equals(lname, user.lname) &&
-                Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(passconfirm, user.passconfirm);
+        return Objects.equals(iD, user.iD) &&
+                getUserId().equals(user.getUserId()) &&
+                getFname().equals(user.getFname()) &&
+                getLname().equals(user.getLname()) &&
+                getEmail().equals(user.getEmail()) &&
+                getPassword().equals(user.getPassword()) &&
+                getPassconfirm().equals(user.getPassconfirm()) &&
+                getRole() == user.getRole();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, fname, lname, email, password, passconfirm);
+        return Objects.hash(iD, getUserId(), getFname(), getLname(), getEmail(), getPassword(), getPassconfirm(), getRole());
     }
 
+    public Long getiD() { return iD; }
+    public void setiD(Long iD) { this.iD = iD; }
     public String getUserId() {
         return userId;
     }
@@ -82,6 +87,8 @@ public class User {
     public void setPassconfirm(String passconfirm) {
         this.passconfirm = passconfirm;
     }
+    public Role getRole() { return role; }
 
+    public void setRole(Role role) { this.role = role; }
 
 }
