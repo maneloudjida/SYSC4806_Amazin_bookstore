@@ -1,9 +1,14 @@
 package Amazin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.*;
-
+@Entity
 public class Cart {
+    @Id
+    @GeneratedValue
+    int id;
     Hashtable<String, Book> cart=new Hashtable<String, Book>();
 
 

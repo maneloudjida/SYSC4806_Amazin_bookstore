@@ -1,6 +1,7 @@
 package Amazin.Controller;
 
 import Amazin.entity.Book;
+import Amazin.entity.Cart;
 import Amazin.entity.User;
 import Amazin.repository.BookRepository;
 import Amazin.repository.UserRepository;
@@ -27,12 +28,14 @@ public class CartController {
     }
 
     @GetMapping("/addtoCart")//need user id!
-    public String addtoCart(@ModelAttribute("id") Integer id, Model model)
+    public String addtoCart(@ModelAttribute("bookID") Integer id,  Model model)
     {
         Book b = books.findById(id).get();
-        User u = users.findById(id).get();
-        u.addToCart(b);
-        model.addAttribute("cartinfo", u.shoppingCart.toString());
+        Cart cart = new Cart();
+        cart.addToCart(b);
+        //User u = users.findById(userID).get();
+        //u.addToCart(b);
+        model.addAttribute("cartinfo", cart.toString());
         return "cart";
     }
 

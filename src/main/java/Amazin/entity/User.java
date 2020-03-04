@@ -18,7 +18,7 @@ public class User {
     private String email;
     private String password;
 
-    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    //@OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Role role;
 
     public User() {
