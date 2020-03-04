@@ -1,0 +1,10 @@
+Amazin\entity\Cart.class
+Amazin\entity\User.class
+Amazin\entity\Book.class
+Amazin\Main.class
+Amazin\Controller\CartController.class
+Amazin\entity\Role.class
+Amazin\Controller\BookListController.class
+Amazin\repository\BookRepository.class
+Amazin\repository\UserRepository.class
+Amazin\Controller\BookController.class

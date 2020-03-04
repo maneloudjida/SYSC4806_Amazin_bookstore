@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SYSC4806_Amazin_bookstore" target="8" />
+      <module name="SYSC4806_Amazin_bookstore" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
