@@ -37,8 +37,8 @@ Mohammad Goolam Dustagheer
 2.
  
 Tareq Hanafi
-1.
-2.
+1. I have worked on creating the login and sign up pages.
+2. Work on associating the user repository with the pages, along with figuring out how to implement 3rd party authentication. Also looking into adding a generic css file. 
  
 Nnamdi Okwechime 
 1.
