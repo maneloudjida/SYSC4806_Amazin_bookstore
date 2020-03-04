@@ -1,6 +1,7 @@
 # SYSC4806_Amazin_bookstore 
 
 Team Noob Members:
+
  Mohammad Goolam Dustagheer
  Tareq Hanafi
  Nnamdi Okwechime
@@ -9,6 +10,7 @@ Team Noob Members:
 
 ------------------------------------------------------------------------------------------------------------
 Background:
+
 The Amazin is a simulation of an online bookstore that is inspired by Amazon. 
 
 ------------------------------------------------------------------------------------------------------------
@@ -46,8 +48,10 @@ Manel Oudjida (100945382)
 - what have I done this week?  Setting up the project on github. Responsible for the implementation of Entity classes (User, Role, Book) & repository classes(Bookrepository, userRepository). Project documentation and UML class diagram.
 - what will I do next week? 
 
-
- Kyle Smith	
+Kyle Smitch
 1.
 2.
+
+
+
 ------------------------------------------------------------------------------------------------------------
