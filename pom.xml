@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>babaksoft</groupId>
-    <artifactId>AddressBook</artifactId>
+    <artifactId>Amazin</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
