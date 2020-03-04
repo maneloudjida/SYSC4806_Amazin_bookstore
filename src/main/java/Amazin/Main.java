@@ -8,18 +8,16 @@ import Amazin.entity.Book;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
 public class Main {
 
-	private static final Logger log = LoggerFactory.getLogger(Main.class);
 
 	public static void main(String[] args) {
-		SpringApplication.run(Main.class, args);
+ 		SpringApplication.run(Main.class, args);
 	}
 
 	@Bean
@@ -32,7 +30,8 @@ public class Main {
 			users.save(Owner);
 			users.save(Customer);
 
-			Book memeBook = new Book("Memes","A book about memes","ISBN","picture","Kyle","Rayhaan",1,50);
+			//save a few books
+			Book memeBook = new Book("The Library Book","A book about memes","11100010011","https://images-na.ssl-images-amazon.com/images/I/51pmJwGu0bL._SX340_BO1,204,203,200_.jpg","Kyle","Rayhaan",1,50);
 			Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00);
 			Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00);
 			Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50);

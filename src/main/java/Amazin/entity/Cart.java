@@ -1,9 +1,10 @@
 package Amazin.entity;
 
+import javax.persistence.Entity;
 import java.util.*;
 
 public class Cart {
-    Hashtable<String, Book> cart=new Hashtable<String, Book>();
+    Hashtable<Integer, Book> cart=new Hashtable<Integer, Book>();
 
 
     public void Cart(){

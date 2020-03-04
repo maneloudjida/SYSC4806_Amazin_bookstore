@@ -1,0 +1,7 @@
+Amazin\entity\Cart.class
+Amazin\entity\User.class
+Amazin\entity\Book.class
+Amazin\Main.class
+Amazin\entity\Role.class
+Amazin\repository\BookRepository.class
+Amazin\repository\UserRepository.class

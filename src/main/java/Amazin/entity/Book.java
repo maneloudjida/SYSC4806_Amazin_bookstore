@@ -9,7 +9,7 @@ public class Book {
 
     @Id
     @GeneratedValue
-    private String id;
+    private Integer id;
 
     private String name;
     private String description;
@@ -20,7 +20,8 @@ public class Book {
     private int inventory;
     private double cost;
 
-
+    public Book() {
+    }
     public Book(String name, String description, String ISBN, String picture, String author, String publisher,
                 int inventory, double cost) {
         this.name = name;
@@ -32,16 +33,6 @@ public class Book {
         this.inventory = inventory;
         this.cost = cost;
     }
-
-
-
-    public Book() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-
-
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -110,10 +101,10 @@ public class Book {
             return false;
         return true;
     }
-    public String getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getName() {

@@ -1,14 +1,17 @@
 package Amazin.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class User {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
+
     private String fname;
     private String lname;
     private String email;
@@ -16,10 +19,7 @@ public class User {
     private Role role;
 
     public User() {
-        super();
-        // TODO Auto-generated constructor stub
     }
-
     public User(String fname, String lname, String email, String password, Role role) {
         this.fname = fname;
         this.lname = lname;
@@ -46,9 +46,8 @@ public class User {
     public int hashCode() {
         return Objects.hash(id, getFname(), getLname(), getEmail(), getPassword(), getRole());
     }
-
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
     public String getFname() {
         return fname;
     }
