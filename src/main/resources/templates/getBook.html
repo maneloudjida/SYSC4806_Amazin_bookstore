@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form th:action="@{/getBook}" th:object="${newBook}" method="post">
+    <p>Name: </p><input type="text" id="name" name="name" /><br>
+    <p>Description: </p><input type="text" id="description" name="description" /><br>
+    <p>Author: </p><input type="text" id="author" name="author" /><br>
+    <p>Publisher: </p><input type="text" id="publisher" name="publisher" /><br>
+    <p>Picture Link: </p><input type="text" id="picture" name="picture" /><br>
+    <p>ISBN: </p><input type="text" id="ISBN" name="ISBN" /><br>
+    <p>Cost: </p><input type="text" id="cost" name="cost" /><br>
+    <p>Stock: </p><input type="text" id="inventory" name="inventory" /><br>
+    <button type="submit">Add</button>
+</form>
+<br><br><br>
+<form method="get" th:action="'/'">
+    <input type="submit" value="Go back" />
+</form>
+</body>
+</html>
