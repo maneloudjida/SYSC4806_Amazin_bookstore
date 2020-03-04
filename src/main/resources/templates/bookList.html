@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazin Book Store</title>
+</head>
+<body>
+<p>-----Books-----</p>
+
+
+<tr class="Book" th:each="book: ${books}">
+    <td> Name: </td>
+    <td th:text="${book.name}" /><br>
+    <td> ID: </td>
+    <td th:text="${book.id}" /><br>
+    <form  method="get" th:action="'/book'">
+        <input type="hidden" name="id" th:value="${book.id}">
+        <input class="book" type="submit" value="select book" />
+    </form>
+    <br><br>
+</tr>
+
+<form class="addbook" method="get" th:action="'/getBook'">
+    <input type="submit" value="Add Book" />
+</form>
+<br><br>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/SPAController.js"></script>
+-->
+</body>
+</html>
