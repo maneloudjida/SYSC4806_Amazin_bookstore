@@ -34,20 +34,20 @@ public class UserTest {
     }
     @org.junit.jupiter.api.Test
     void getPassword(){
-        assertEquals(user.getPassword(),"Hello");
+        assertEquals(user.getPassword(),"hel");
     }
     @org.junit.jupiter.api.Test
     void setPassword(){
         user.setPassword("Meet");
-        assertEquals(user.getLname(),"Meet");
+        assertEquals(user.getPassword(),"Meet");
     }
     @org.junit.jupiter.api.Test
     void getRole(){
-        assertEquals(user.getPassword(),Role.ROLE_CUSTOMER);
+        assertEquals(user.getRole(),Role.ROLE_CUSTOMER);
     }
     @org.junit.jupiter.api.Test
     void setRole(){
         user.setRole(Role.ROLE_BOOKSTOREOWNER);
-        assertEquals(user.getPassword(),Role.ROLE_BOOKSTOREOWNER);
+        assertEquals(user.getRole(),Role.ROLE_BOOKSTOREOWNER);
     }
 }
