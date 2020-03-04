@@ -2,7 +2,7 @@
 
 Team Noob Members:
 
- Mohammad Goolam Dustagheer
+ Rayhaan Dustagheer
  Tareq Hanafi
  Nnamdi Okwechime
  Manel Oudjida
