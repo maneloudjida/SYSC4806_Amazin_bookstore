@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import java.util.*;
 
 public class Cart {
-    Hashtable<Integer, Book> cart=new Hashtable<Integer, Book>();
+    Hashtable<String, Book> cart=new Hashtable<String, Book>();
 
 
     public void Cart(){
@@ -12,7 +12,7 @@ public class Cart {
      }
 
      public void addToCart(Book book){
-        cart.put(book.getId(), book);
+        cart.put(book.getName(), book);
      }
 
      public void removeFromCart(String bookName){
