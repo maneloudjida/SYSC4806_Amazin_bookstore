@@ -28,6 +28,7 @@
 
     <form method="get" th:action="'/addtoCart'">
         <input type ="hidden" name="bookID" th:value="${book.id}">
+        <input type="hidden" name="user" th:value="${user}">
         <input type="submit" value="Add To Cart" />
     </form>
     <form method="get" th:action="'/'">
