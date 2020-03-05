@@ -1,3 +1,4 @@
-Amazin\entity\CartTest.class
-Amazin\entity\BookTest.class
 Amazin\entity\UserTest.class
+Amazin\entity\CartTest.class
+Amazin\WebTest\TestingWebApp.class
+Amazin\entity\BookTest.class
