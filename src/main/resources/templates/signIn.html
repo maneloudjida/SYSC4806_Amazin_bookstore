@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
-
+<form th:action="@/SignIn" method="get">
+    <p>First Name: </p><input type="text" id="fname" name="fname" /><br>
+    <p>Last Name: </p><input type="text" id="lname" name="lname" /><br>
+    <p>Email: </p><input type="text" id="email" name="email" /><br>
+    <p>Password: </p><input type="text" id="password" name="password" /><br>
+    <input type="hidden" name="userID" th:value="${user.id}">
+    <button type="submit">Sign Up</button>
+</form>
 </body>
 </html>
