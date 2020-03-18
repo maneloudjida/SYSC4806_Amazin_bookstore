@@ -11,6 +11,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 @Service
+/**
+ * This class provides the user that is logged in the use of the system if they are either signed in
+ * Or if they registered
+ */
 public class SecurityServiceImpl implements SecurityService{
     @Autowired
     private AuthenticationManager authenticationManager;

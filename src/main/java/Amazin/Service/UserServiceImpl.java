@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-
 @Service
+/**
+ * This class saves a new user, while decrypting the users account
+ */
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
@@ -16,13 +17,20 @@ public class UserServiceImpl implements UserService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
+    /**
+     * Using the bCryptPasswordEncoder
+     * Used to encode the password
+     */
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
 
     @Override
-    public User findByUsername(String username) {
-        return userRepository.findByEmail(username);
+    /**
+     * Checks if there the email is in the repository already
+     */
+    public User findByUsername(String email) {
+        return userRepository.findByEmail(email);
     }
 }

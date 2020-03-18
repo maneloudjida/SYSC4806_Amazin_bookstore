@@ -13,6 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * This class implements the login from Spring Security
+ * The interface is used in different classes
+ */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{
     @Autowired
@@ -20,12 +24,15 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 
     @Override
     @Transactional(readOnly = true)
-    public UserDetails loadUserByUsername(String username) {
-        User user = userRepository.findByEmail(username);
-        if (user == null) throw new UsernameNotFoundException(username);
+    /**
+     * This class checks if a user already exists in the system, we'll be making the emails unique keys
+     */
+    public UserDetails loadUserByUsername(String email) {
+        User user = userRepository.findByEmail(email);
+        if (user == null) throw new UsernameNotFoundException(email);
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-
+        //In the future, I'll add a functionality here that will make the user have access to a specific part of the system, depending on the role
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), grantedAuthorities);
     }
 }

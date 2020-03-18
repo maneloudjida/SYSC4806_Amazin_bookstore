@@ -14,21 +14,31 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
+/**
+ * Configures the web security for what user / customer uses the system
+ */
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Qualifier("userDetailsServiceImpl")
     @Autowired
     private UserDetailsService userDetailsService;
 
     @Bean
+    /**
+     * Encrypts the password
+     */
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Override
+    /**
+     * Configures the HTTP Security for the login and sign In
+     * Also associates in house built login page with the springframework login
+     */
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/resources/**", "/registration").permitAll()
+                .antMatchers("/signIn").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
