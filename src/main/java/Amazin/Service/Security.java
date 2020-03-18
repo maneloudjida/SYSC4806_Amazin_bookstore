@@ -3,12 +3,12 @@ package Amazin.Service;
 /**
  * Interface of the security service
  */
-public interface SecurityService {
+public interface Security {
         /**
          * This find the user that is logged
          * @return logged in User
          */
-        String findLoggedInUsername();
+        String findLoggedInEmail();
 
         /**
          * This method automatically makes a user sign in if the user is authenticated

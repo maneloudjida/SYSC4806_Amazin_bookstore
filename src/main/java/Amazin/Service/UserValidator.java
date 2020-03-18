@@ -17,7 +17,7 @@ import org.springframework.validation.Validator;
 
 public class UserValidator implements Validator {
     @Autowired
-    private UserService userService;
+    private UserSignIn userService;
 
     @Override
     /**

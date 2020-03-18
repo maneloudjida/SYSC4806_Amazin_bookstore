@@ -15,17 +15,17 @@ import org.springframework.stereotype.Service;
  * This class provides the user that is logged in the use of the system if they are either signed in
  * Or if they registered
  */
-public class SecurityServiceImpl implements SecurityService{
+public class SecurityImpl implements Security {
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @Autowired
     private UserDetailsService userDetailsService;
 
-    private static final Logger logger = LoggerFactory.getLogger(SecurityServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(SecurityImpl.class);
 
     @Override
-    public String findLoggedInUsername() {
+    public String findLoggedInEmail() {
         Object userDetails = SecurityContextHolder.getContext().getAuthentication().getDetails();
         if (userDetails instanceof UserDetails) {
             return ((UserDetails)userDetails).getUsername();

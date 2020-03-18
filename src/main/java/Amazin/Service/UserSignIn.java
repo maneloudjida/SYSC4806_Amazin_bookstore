@@ -5,7 +5,7 @@ import Amazin.entity.User;
 /**
  * This interface is used in the controller in order to sign user up
  */
-public interface UserService {
+public interface UserSignIn {
     /**
      * This method saves the users information
      * @param user is the User that wants to be saved to the repository

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 /**
  * This class saves a new user, while decrypting the users account
  */
-public class UserServiceImpl implements UserService {
+public class UserSignInImpl implements UserSignIn {
     @Autowired
     private UserRepository userRepository;
     @Autowired

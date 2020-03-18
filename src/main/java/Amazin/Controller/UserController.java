@@ -1,7 +1,7 @@
 package Amazin.Controller;
 
-import Amazin.Service.SecurityService;
-import Amazin.Service.UserService;
+import Amazin.Service.Security;
+import Amazin.Service.UserSignIn;
 //import Amazin.Service.UserValidator;
 import Amazin.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class UserController {
     @Autowired
-    private UserService userService;
+    private UserSignIn userSignIn;
 
     @Autowired
-    private SecurityService securityService;
+    private Security security;
 
     /**
      * @Autowired
@@ -39,8 +39,8 @@ public class UserController {
         }
          */
 
-        userService.save(userForm);
-        securityService.autoLogin(userForm.getEmail(), userForm.getPassword());
+        userSignIn.save(userForm);
+        security.autoLogin(userForm.getEmail(), userForm.getPassword());
         return "redirect:/welcome";
     }
 
