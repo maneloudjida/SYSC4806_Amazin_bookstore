@@ -1,8 +1,6 @@
 package Amazin.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -12,10 +10,15 @@ public class User {
     @GeneratedValue
     private Integer id;
 
+    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    public Cart shoppingCart;//will change to private later
+
     private String fname;
     private String lname;
     private String email;
     private String password;
+
+    //@OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Role role;
 
     public User() {
@@ -26,6 +29,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.role = role;
+        shoppingCart = new Cart();
     }
 
     @Override
@@ -77,5 +81,7 @@ public class User {
     public Role getRole() { return role; }
 
     public void setRole(Role role) { this.role = role; }
+
+    public void addToCart(Book book){ shoppingCart.addToCart(book);}
 
 }
