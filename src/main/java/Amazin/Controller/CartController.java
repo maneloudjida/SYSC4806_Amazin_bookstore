@@ -35,20 +35,11 @@ public class CartController {
     public String addtoCart(@ModelAttribute("bookID") Integer id,  Model model)
     {
         Book b = books.findById(id).get();
-        //Integer i = 1;
-        //users.findById(i).get().addToCart(b);
+        
         User u = users.findByfname("Kyle");
         u.addToCart(b);
 
-        //Cart sCart = (Cart) model.getAttribute("shopCart");
-        //Cart cart = new Cart();
-        //sCart.addToCart(b);
-        //User u = users.findById(userID).get();
-        //u.addToCart(b);
-        //model.addAttribute("shopCart", cart);
-        //model.addAttribute("cartinfo", users.findById(i).get().shoppingCart.toString()+ users.findById(i).get().getFname());
         model.addAttribute("cartinfo", u.shoppingCart.toString());
-        //users.findById(i).get().setFname("MEME");
         return "cart";
     }
 
