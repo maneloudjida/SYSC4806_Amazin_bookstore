@@ -5,14 +5,22 @@ Team Noob Members:
  Rayhaan Dustagheer
  Tareq Hanafi
  Nnamdi Okwechime
- Manel Oudjida (100945382)
- Kyle Smith	(101045797)
+ Manel Oudjida
+ Kyle Smith	
 
 ------------------------------------------------------------------------------------------------------------
 Background:
 
 The Amazin is a simulation of an online bookstore that is inspired by Amazon. 
 
+------------------------------------------------------------------------------------------------------------
+
+Packages descriptions
+
+entity: 
+repository: 
+Controller: 
+resources/Templates: Holds the HTML files 
 ------------------------------------------------------------------------------------------------------------
 Features:
 
@@ -25,7 +33,15 @@ Features:
 - Show user book recommendations based on searches.
 
 ------------------------------------------------------------------------------------------------------------
+UML Diagram:
 
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
 Milestone 1 Task:
 
 Questions:
@@ -33,27 +49,27 @@ Questions:
 2. what will I do next week? 
 
 Mohammad Goolam Dustagheer
-1. Responsible for the implementaion of testing classes (user & book)
-2. Implementing the forget login page and reset password with controller/email.
- 
+
+Responsible for the implementaion of testing classes (user & book)
+Implementing the forget login page and reset password with controller/email.
+
 Tareq Hanafi
-1. Implementation of the login and sign up pages.
-2. Implementation of the user repository with the pages, along with figuring out how to implement 3rd party authentication. 
- 
-Nnamdi Okwechime 
-1. Reponsible for the implementation of Cart and the cartTest. Setting up the project Travis CI and heroku 
-2. Implementation of cartController & CartView.
+
+-Implementation of the login and sign up pages.
+-Implementation of the user repository with the pages, along with figuring out how to implement 3rd party authentication.
+
+Nnamdi Okwechime
+-Reponsible for the implementation of Cart and the cartTest. Setting up the project Travis CI and heroku
+-Implementation of cartController & CartView.
 
 
-Manel Oudjida 
-1. Setting up the project on github and heroku, responsible for the implementation of Entity classes (User, Role, Book) & repository classes(Bookrepository, userRepository) and project documentation. 
-2. Adding CSS and/or javascript to the page and implement a search bar on the booklist/home page.
-
-
+Manel Oudjida (100945382)
+- Setting up the project on github. Responsible for the implementation of Entity classes (User, Role, Book) & repository classes(Bookrepository, userRepository). Project documentation and UML class diagram.
+- what will I do next week? 
 
 Kyle Smith
-1. Implementation of springbootapplication, the landing page, add book page, view book page, and their controllers. Also fixed annotations on the repos to make them CRUD.
-2. Restrict the add book page to only the owner user, add additional functionality to the view book page for owners.
+1. this week i set up the project as a springbootapplication, made the landing page, add book page, view book page, and their controllers. Also fixed annotations on the repos to make them CRUD.
+2. next week i will restrict the add book page to only the owner user, add additional functionality to the view book page for owners, possibly implement a search bar on the booklist/home page.
 
 
 
