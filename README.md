@@ -38,7 +38,12 @@ UML Diagram:
 
 UML Diagram.png
 
+------------------------------------------------------------------------------------------------------------
+Heroku Setup:
 
+To access the heroku, please click on the following link: https://sysc4806amazin.herokuapp.com
+
+------------------------------------------------------------------------------------------------------------
 
 Milestones Breakdown
 
@@ -80,21 +85,22 @@ Milestone 2 Task:
 
 *Mohammad Goolam Dustagheer*
 
--Implementation of the search bar
+1.Implementation of the search bar
+2. Add some CSS features
 
 *Tareq Hanafi*
 
--Implementation of the login and sign up pages.
--complete the implementation of the login and sign up pages
+1.Implementation of the login and sign up pages.
+2.complete the implementation of the login and sign up pages
 
 *Nnamdi Okwechime*
--implementation of add cart feature
--Implementation of cartController & CartView.
+1.implementation of add cart feature
+2.Implementation of cartController & CartView.
 
 
 *Manel Oudjida (100945382)*
-- implementation of forget password, CSS and project documentation and UML class diagram.
-- implementation of the forget password & reset password
+1. implementation of forget password, CSS and project documentation and UML class diagram.
+2. implementation of the forget password & reset password
 
 *Kyle Smith*
 1. Implementation of the add book page and added some functionality to the view book page.
