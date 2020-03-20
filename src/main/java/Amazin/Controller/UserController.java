@@ -23,24 +23,24 @@ public class UserController {
     private UserValidator userValidator;
      **/
 
-    @GetMapping("/registration")
-    public String registration(Model model) {
-        model.addAttribute("userForm", new User());
+    @GetMapping("/signIn")
+    public String signIn(Model model) {
+        model.addAttribute("newUser", new User());
 
-        return "registration";
+        return "signIn";
     }
 
-    @PostMapping("/registration")
-    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+    @PostMapping("/signIn")
+    public String signIn(@RequestBody User newUser, BindingResult bindingResult) {
         /**
         userValidator.validate(userForm, bindingResult);
         if (bindingResult.hasErrors()) {
-            return "registration";
+            return "signIn";
         }
          */
 
-        userSignIn.save(userForm);
-        security.autoLogin(userForm.getEmail(), userForm.getPassword());
+        userSignIn.save(newUser);
+        security.autoLogin(newUser.getEmail(), newUser.getPassword());
         return "redirect:/welcome";
     }
 

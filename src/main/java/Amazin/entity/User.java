@@ -1,5 +1,7 @@
 package Amazin.entity;
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
