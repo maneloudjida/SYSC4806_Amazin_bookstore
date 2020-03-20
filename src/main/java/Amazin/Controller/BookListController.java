@@ -25,6 +25,13 @@ public class BookListController {
         return "bookList";
     }
 
+    @GetMapping("/search")
+    public String getByName(@ModelAttribute("name")String name, Model model) {
+
+        model.addAttribute("books", books.findByName(name));
+        return "bookList";
+    }
+
     @GetMapping("/getBook")
     public String getInputBook(Model model) {
 
