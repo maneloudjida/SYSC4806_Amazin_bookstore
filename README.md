@@ -14,6 +14,14 @@ Background:
 The Amazin is a simulation of an online bookstore that is inspired by Amazon. 
 
 ------------------------------------------------------------------------------------------------------------
+
+Packages descriptions
+
+entity: 
+repository: 
+Controller: 
+resources/Templates: Holds the HTML files 
+------------------------------------------------------------------------------------------------------------
 Features:
 
 - User can search, browse through the books in bookstore, sort and filter based on desired information.
@@ -25,7 +33,15 @@ Features:
 - Show user book recommendations based on searches.
 
 ------------------------------------------------------------------------------------------------------------
+UML Diagram:
 
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
 Milestone 1 Task:
 
 Questions:
@@ -45,7 +61,7 @@ Nnamdi Okwechime
 2.
 
 Manel Oudjida (100945382)
-- what have I done this week?  Setting up the project on github. Responsible for the implementation of Entity classes (User, Role, Book) & repository classes(Bookrepository, userRepository). Project documentation and UML class diagram.
+- Setting up the project on github. Responsible for the implementation of Entity classes (User, Role, Book) & repository classes(Bookrepository, userRepository). Project documentation and UML class diagram.
 - what will I do next week? 
 
 Kyle Smith
