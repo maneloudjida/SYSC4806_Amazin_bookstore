@@ -89,15 +89,19 @@ Milestone 2 Task:
 *Mohammad Goolam Dustagheer*
 
 1.Implementation of the search bar
+
 2. Add some CSS features
 
 *Tareq Hanafi*
 
 1.Implementation of the login and sign up pages.
+
 2.complete the implementation of the login and sign up pages
 
 *Nnamdi Okwechime*
+
 1.implementation of add cart feature
+
 2.Implementation of cartController & CartView.
 
 
