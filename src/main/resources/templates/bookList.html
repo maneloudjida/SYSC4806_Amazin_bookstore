@@ -5,8 +5,7 @@
     <title>Amazin Book Store</title>
 </head>
 <body>
-<p>-----Books-----</p>
-
+<p>-----Books-----</p><br>
 
 <tr class="Book" th:each="book: ${books}">
     <td> Name: </td>
@@ -23,6 +22,16 @@
 <form class="addbook" method="get" th:action="'/getBook'">
     <input type="submit" value="Add Book" />
 </form>
+<br>
+<form class="searchBook" method="get" th:action="'/search'">
+    <input type="text" id="name" name="name" />
+    <input type="submit" value="Search" placeholder="Search.."/>
+</form>
+<br>
+<form method="get" th:action="'/'">
+    <input type="submit" value="Go back" />
+</form>
+
 <br><br>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/js/SPAController.js"></script>
