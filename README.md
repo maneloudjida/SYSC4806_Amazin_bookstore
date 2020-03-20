@@ -37,9 +37,10 @@ Features:
 - Show user book recommendations based on searches.
 
 ------------------------------------------------------------------------------------------------------------
-UML Diagram:
+Diagram:
 
 UML Diagram.png
+Database Diagram.png
 
 ------------------------------------------------------------------------------------------------------------
 Heroku Setup:
