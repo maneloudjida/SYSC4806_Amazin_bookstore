@@ -5,12 +5,14 @@ import Amazin.Service.UserSignIn;
 //import Amazin.Service.UserValidator;
 import Amazin.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
+@Configuration
 public class UserController {
     @Autowired
     private UserSignIn userSignIn;
@@ -59,8 +61,8 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping({"/", "/welcome"})
+    @GetMapping({"/", "/home"})
     public String welcome(Model model) {
-        return "welcome";
+        return "home";
     }
 }
