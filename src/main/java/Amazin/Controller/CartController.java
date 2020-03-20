@@ -28,14 +28,17 @@ public class CartController {
     }
 
     @GetMapping("/addtoCart")//need user id!
-    public String addtoCart(@ModelAttribute("bookID") Integer id,  Model model)
+    public String addtoCart(@ModelAttribute("bookID") Integer id,@ModelAttribute("shopCart") Cart sCart,  Model model)
     {
         Book b = books.findById(id).get();
-        Cart cart = new Cart();
-        cart.addToCart(b);
+        //Cart sCart = (Cart) model.getAttribute("shopCart");
+        //Cart cart = new Cart();
+        sCart.addToCart(b);
+
         //User u = users.findById(userID).get();
         //u.addToCart(b);
-        model.addAttribute("cartinfo", cart.toString());
+        //model.addAttribute("shopCart", cart);
+        model.addAttribute("shopCart", sCart);
         return "cart";
     }
 

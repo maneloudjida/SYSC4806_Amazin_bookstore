@@ -5,6 +5,10 @@
     <title>Cart page</title>
 </head>
 <body>
-<p th:text="${cartinfo} +'-----'"> </p>
+<p th:text="${shopCart.toString()} +'-----'"> </p>
+
+<form method="get" th:action="'/'">
+    <input type="submit" value="Go back" />
+</form>
 </body>
 </html>
