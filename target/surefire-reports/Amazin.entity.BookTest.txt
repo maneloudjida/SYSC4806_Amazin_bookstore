@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Amazin.entity.BookTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.083 s <<< FAILURE! - in Amazin.entity.BookTest
-getName  Time elapsed: 0.058 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <Hello>
-	at Amazin.entity.BookTest.getName(BookTest.java:34)
-
-getId  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <null> but was: <1>
-	at Amazin.entity.BookTest.getId(BookTest.java:23)
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in Amazin.entity.BookTest

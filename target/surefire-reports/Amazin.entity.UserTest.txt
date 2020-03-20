@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Amazin.entity.UserTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in Amazin.entity.UserTest
-setPassword  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <Smith> but was: <Meet>
-	at Amazin.entity.UserTest.setPassword(UserTest.java:42)
-
-getPassword  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <hel> but was: <Hello>
-	at Amazin.entity.UserTest.getPassword(UserTest.java:37)
-
-getRole  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <hel> but was: <ROLE_CUSTOMER>
-	at Amazin.entity.UserTest.getRole(UserTest.java:46)
-
-setRole  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <hel> but was: <ROLE_BOOKSTOREOWNER>
-	at Amazin.entity.UserTest.setRole(UserTest.java:51)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in Amazin.entity.UserTest

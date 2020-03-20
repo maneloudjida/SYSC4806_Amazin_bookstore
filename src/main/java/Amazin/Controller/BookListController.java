@@ -1,6 +1,7 @@
 package Amazin.Controller;
 
 import Amazin.entity.Book;
+import Amazin.entity.Cart;
 import Amazin.repository.BookRepository;
 import Amazin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,16 @@ public class BookListController {
 
     @GetMapping("/")
     public String getBooks(Model model) {
+        //model.addAttribute("shopCart");
 
         model.addAttribute("books", books.findAll());
+        return "bookList";
+    }
+
+    @GetMapping("/search")
+    public String getByName(@ModelAttribute("name")String name, Model model) {
+
+        model.addAttribute("books", books.findByName(name));
         return "bookList";
     }
 
