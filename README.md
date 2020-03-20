@@ -17,10 +17,10 @@ The Amazin is a simulation of an online bookstore that is inspired by Amazon.
 
 Packages descriptions
 
--entity: 
--repository: 
--Controller: 
--Resrouces/Templates: 
+-entity: All entities in the model
+-repository: All repositories for accessing relevant entities
+-Controller: All controllers 
+-Resrouces/Templates: All html pages 
 
 ------------------------------------------------------------------------------------------------------------
 Features:
