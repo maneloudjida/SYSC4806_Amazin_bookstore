@@ -24,8 +24,8 @@ public class Main {
 	public CommandLineRunner demo(UserRepository users, BookRepository books) {
 		return (args) -> {
 			// save a few customers
-			User Owner = new User("Kyle","Smith","fake@fake.com","123456", Role.ROLE_BOOKSTOREOWNER);
-			User Customer = new User("Rayhaan","Dustagheer","Raymaan@fake.com","123456", Role.ROLE_CUSTOMER);
+			User Owner = new User("Kyle","Smith","fake@fake.com","123456", Role.ROLE_BOOKSTOREOWNER, "KSmith");
+			User Customer = new User("Rayhaan","Dustagheer","Raymaan@fake.com","123456", Role.ROLE_CUSTOMER, "RDustagheer");
 
 			users.save(Owner);
 			users.save(Customer);

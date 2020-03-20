@@ -1,11 +1,10 @@
 package Amazin.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table
 public class User {
 
     @Id
@@ -13,19 +12,26 @@ public class User {
     private Integer id;
 
     private String fname;
+
     private String lname;
+
     private String email;
+
     private String password;
+
     private Role role;
+
+    private String username;
 
     public User() {
     }
-    public User(String fname, String lname, String email, String password, Role role) {
+    public User(String fname, String lname, String email, String password, Role role, String username) {
         this.fname = fname;
         this.lname = lname;
         this.email = email;
         this.password = password;
         this.role = role;
+        this.username = username;
     }
 
     @Override
@@ -39,7 +45,8 @@ public class User {
                 getLname().equals(user.getLname()) &&
                 getEmail().equals(user.getEmail()) &&
                 getPassword().equals(user.getPassword()) &&
-                getRole() == user.getRole();
+                getRole() == user.getRole() &&
+                getUsername() == user.getUsername();
     }
 
     @Override
@@ -69,13 +76,10 @@ public class User {
     public String getPassword() {
         return password;
     }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
+    public void setPassword(String password) { this.password = password;}
+    public String getUsername() { return username; }
+    public void setUsername(String username) {this.username = username; }
     public Role getRole() { return role; }
-
     public void setRole(Role role) { this.role = role; }
 
 }

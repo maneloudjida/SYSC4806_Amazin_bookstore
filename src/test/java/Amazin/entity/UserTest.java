@@ -7,7 +7,7 @@ public class UserTest {
     User user;
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        this.user= new User("Kyle", "Smith", "kyle@yahoo.com", "hel", Role.ROLE_CUSTOMER);
+        this.user= new User("Kyle", "Smith", "kyle@yahoo.com", "hel", Role.ROLE_CUSTOMER, "KSmith");
     }
 
     @org.junit.jupiter.api.AfterEach
@@ -49,5 +49,14 @@ public class UserTest {
     void setRole(){
         user.setRole(Role.ROLE_BOOKSTOREOWNER);
         assertEquals(user.getRole(),Role.ROLE_BOOKSTOREOWNER);
+    }
+    @org.junit.jupiter.api.Test
+    void getUsername(){
+        assertEquals(user.getUsername(),"KSmith");
+    }
+    @org.junit.jupiter.api.Test
+    void setUsername() {
+        user.setUsername("KSmith1");
+        assertEquals(user.getUsername(), "KSmith1");
     }
 }
