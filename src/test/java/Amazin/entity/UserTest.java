@@ -7,7 +7,7 @@ public class UserTest {
     User user;
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        this.user= new User("Kyle", "Smith", "kyle@yahoo.com", "hel", Role.ROLE_CUSTOMER, "KSmith");
+        this.user= new User("Kyle", "Smith", "kyle@yahoo.com", "hel", Role.ROLE_CUSTOMER, "KSmith", 1);
     }
 
     @org.junit.jupiter.api.AfterEach
@@ -58,5 +58,14 @@ public class UserTest {
     void setUsername() {
         user.setUsername("KSmith1");
         assertEquals(user.getUsername(), "KSmith1");
+    }
+    @org.junit.jupiter.api.Test
+    void getEnabled(){
+        assertEquals(user.getEnabled(),1);
+    }
+    @org.junit.jupiter.api.Test
+    void setEnabled() {
+        user.setEnabled(0);
+        assertEquals(user.getEnabled(), 0);
     }
 }

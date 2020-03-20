@@ -17,11 +17,11 @@ public class UserController {
     @Autowired
     private UserRepository users;
 
-    @Autowired
+    /**@Autowired
     JdbcUserDetailsManager jdbcUserDetailsManager;
 
     @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;*/
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {

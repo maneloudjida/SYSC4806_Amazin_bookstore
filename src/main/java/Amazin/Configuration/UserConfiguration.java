@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class UserConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
+    /**@Autowired
     DataSource dataSource;
 
     @Autowired
@@ -36,7 +36,7 @@ public class UserConfiguration extends WebSecurityConfigurerAdapter {
         JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager();
         jdbcUserDetailsManager.setDataSource(dataSource);
         return jdbcUserDetailsManager;
-    }
+    }*/
 
     @Override
     public void configure(WebSecurity web) throws Exception{
@@ -55,9 +55,9 @@ public class UserConfiguration extends WebSecurityConfigurerAdapter {
                 .logout().permitAll();
         http.csrf().disable();
     }
-/**
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder a) throws Exception {
         a.inMemoryAuthentication().withUser("Tareq").password("{noop}123").authorities("ROLE_USER", "ROLE_ADMIN");
-    }*/
+    }
 }

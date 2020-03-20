@@ -4,34 +4,45 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table
+@Table(name = "users")
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "userId")
     private Integer id;
 
+    @Column(name = "fname")
     private String fname;
 
+    @Column(name = "lname")
     private String lname;
 
+    @Column(name = "email")
     private String email;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "Role")
     private Role role;
 
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "enabled")
+    private  int enabled;
 
     public User() {
     }
-    public User(String fname, String lname, String email, String password, Role role, String username) {
+    public User(String fname, String lname, String email, String password, Role role, String username, int enabled) {
         this.fname = fname;
         this.lname = lname;
         this.email = email;
         this.password = password;
         this.role = role;
         this.username = username;
+        this.enabled = enabled;
     }
 
     @Override
@@ -46,7 +57,9 @@ public class User {
                 getEmail().equals(user.getEmail()) &&
                 getPassword().equals(user.getPassword()) &&
                 getRole() == user.getRole() &&
-                getUsername() == user.getUsername();
+                getUsername().equals(user.getUsername()) &&
+                getEnabled() == user.getEnabled();
+
     }
 
     @Override
@@ -80,6 +93,8 @@ public class User {
     public String getUsername() { return username; }
     public void setUsername(String username) {this.username = username; }
     public Role getRole() { return role; }
-    public void setRole(Role role) { this.role = role; }
+    public void setRole(Role role) { this.role = role;}
+    public int getEnabled(){return enabled; }
+    public void setEnabled(int enabled){this.enabled = enabled;}
 
 }

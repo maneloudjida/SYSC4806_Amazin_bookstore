@@ -7,8 +7,10 @@ import Amazin.entity.User;
 import Amazin.entity.Book;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 
@@ -24,8 +26,8 @@ public class Main {
 	public CommandLineRunner demo(UserRepository users, BookRepository books) {
 		return (args) -> {
 			// save a few customers
-			User Owner = new User("Kyle","Smith","fake@fake.com","123456", Role.ROLE_BOOKSTOREOWNER, "KSmith");
-			User Customer = new User("Rayhaan","Dustagheer","Raymaan@fake.com","123456", Role.ROLE_CUSTOMER, "RDustagheer");
+			User Owner = new User("Kyle","Smith","fake@fake.com","123456", Role.ROLE_BOOKSTOREOWNER, "KSmith", 1);
+			User Customer = new User("Rayhaan","Dustagheer","Raymaan@fake.com","123456", Role.ROLE_CUSTOMER, "RDustagheer", 1);
 
 			users.save(Owner);
 			users.save(Customer);
