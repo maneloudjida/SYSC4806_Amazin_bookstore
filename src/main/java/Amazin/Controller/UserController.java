@@ -33,7 +33,9 @@ public class UserController {
         return "login";
     }
 
-    /**@RequestMapping(value = "/register", method = RequestMethod.POST)
+    /**
+    To create this I'll need to create a user registration class for the sign up
+    @RequestMapping(value = "/SignUp", method = RequestMethod.POST)
     public ModelAndView processRegister(@ModelAttribute("user") UserRegistration userRegistrationObject) {
 
         User user = new User(userRegistrationObject.getUsername(), userRegistrationObject.getPassword(), authorities);
