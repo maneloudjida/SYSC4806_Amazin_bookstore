@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 //@RepositoryRestResource(collectionResourceRel = "User", path = "users")
 public interface UserRepository extends JpaRepository<User, Integer> {
     //User findByUsername(String username);
-    //User findByfname(String fname);
+    User findByfname(String fname);
 }
