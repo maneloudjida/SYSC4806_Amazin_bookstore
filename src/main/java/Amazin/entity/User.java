@@ -15,8 +15,8 @@ public class User {
     @Column(name = "fname")
     private string fname
   
-    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    public Cart shoppingCart;//will change to private later
+    //@OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    //public Cart shoppingCart;//will change to private later
 
     @Column(name = "lname")
     private String lname;
@@ -47,7 +47,7 @@ public class User {
         this.role = role;
         this.username = username;
         this.enabled = enabled;
-        shoppingCart = new Cart();
+        //shoppingCart = new Cart();
     }
 
     @Override
@@ -64,12 +64,11 @@ public class User {
                 getRole() == user.getRole() &&
                 getUsername().equals(user.getUsername()) &&
                 getEnabled() == user.getEnabled();
-
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, getFname(), getLname(), getEmail(), getPassword(), getRole());
+        return Objects.hash(id, getFname(), getLname(), getEmail(), getPassword(), getRole(), getUsername(), getEnabled());
     }
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
