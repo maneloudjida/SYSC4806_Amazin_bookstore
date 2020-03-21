@@ -13,10 +13,10 @@ public class User {
     private Integer id;
 
     @Column(name = "fname")
-    private string fname
+    private string fname;
   
-    //@OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    //public Cart shoppingCart;//will change to private later
+    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    public Cart shoppingCart;//will change to private later
 
     @Column(name = "lname")
     private String lname;
@@ -47,7 +47,7 @@ public class User {
         this.role = role;
         this.username = username;
         this.enabled = enabled;
-        //shoppingCart = new Cart();
+        shoppingCart = new Cart();
     }
 
     @Override
