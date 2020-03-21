@@ -1,9 +1,14 @@
 package Amazin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.*;
-
+@Entity
 public class Cart {
+    @Id
+    @GeneratedValue
+    int id;
     Hashtable<String, Book> cart=new Hashtable<String, Book>();
 
 
@@ -32,16 +37,15 @@ public class Cart {
          return runTotal;
      }
 
-     public static void main(String[] args){
-         Cart cart = new Cart();
-         Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00);
-         Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00);
-         Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50);
-         Book b4 = new Book("facing",  "This book is facing", "ISBN","picture","Nnamdi","Nnamdi",1,600.50);
-         cart.addToCart(b1);
-         cart.addToCart(b2);
-         cart.addToCart(b3);
-         cart.addToCart(b4);
+
+     public String toString(){
+         String printout= "";
+         //List<Book> iterateCart = (List<Book>) cart.values();
+         for (Book b : cart.values()) {
+             printout = printout +  b.getName() + " \n";
+         }
+
+         return printout;
 
      }
 

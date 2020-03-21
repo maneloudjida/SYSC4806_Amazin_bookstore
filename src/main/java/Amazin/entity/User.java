@@ -13,7 +13,10 @@ public class User {
     private Integer id;
 
     @Column(name = "fname")
-    private String fname;
+    private string fname
+  
+    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    public Cart shoppingCart;//will change to private later
 
     @Column(name = "lname")
     private String lname;
@@ -25,6 +28,7 @@ public class User {
     private String password;
 
     @Column(name = "Role")
+    //@OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Role role;
 
     @Column(name = "username")
@@ -43,6 +47,7 @@ public class User {
         this.role = role;
         this.username = username;
         this.enabled = enabled;
+        shoppingCart = new Cart();
     }
 
     @Override
@@ -96,5 +101,7 @@ public class User {
     public void setRole(Role role) { this.role = role;}
     public int getEnabled(){return enabled; }
     public void setEnabled(int enabled){this.enabled = enabled;}
+
+    public void addToCart(Book book){ shoppingCart.addToCart(book);}
 
 }
