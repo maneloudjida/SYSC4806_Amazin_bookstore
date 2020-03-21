@@ -13,7 +13,7 @@ public class User {
     private Integer id;
 
     @Column(name = "fname")
-    private string fname;
+    private String fname;
   
     @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     public Cart shoppingCart;//will change to private later
