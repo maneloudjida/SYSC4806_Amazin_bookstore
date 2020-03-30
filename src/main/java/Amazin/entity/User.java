@@ -4,49 +4,31 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "userId")
+    @GeneratedValue
     private Integer id;
 
-    @Column(name = "fname")
-    private String fname;
-  
     @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     public Cart shoppingCart;//will change to private later
 
-    @Column(name = "lname")
+    private String fname;
     private String lname;
-
-    @Column(name = "email")
     private String email;
-
-    @Column(name = "password")
     private String password;
 
-    @Column(name = "Role")
     //@OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Role role;
 
-    @Column(name = "username")
-    private String username;
-
-    @Column(name = "enabled")
-    private  int enabled;
-
     public User() {
     }
-    public User(String fname, String lname, String email, String password, Role role, String username, int enabled) {
+    public User(String fname, String lname, String email, String password, Role role) {
         this.fname = fname;
         this.lname = lname;
         this.email = email;
         this.password = password;
         this.role = role;
-        this.username = username;
-        this.enabled = enabled;
         shoppingCart = new Cart();
     }
 
@@ -61,14 +43,12 @@ public class User {
                 getLname().equals(user.getLname()) &&
                 getEmail().equals(user.getEmail()) &&
                 getPassword().equals(user.getPassword()) &&
-                getRole() == user.getRole() &&
-                getUsername().equals(user.getUsername()) &&
-                getEnabled() == user.getEnabled();
+                getRole() == user.getRole();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, getFname(), getLname(), getEmail(), getPassword(), getRole(), getUsername(), getEnabled());
+        return Objects.hash(id, getFname(), getLname(), getEmail(), getPassword(), getRole());
     }
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
@@ -93,13 +73,14 @@ public class User {
     public String getPassword() {
         return password;
     }
-    public void setPassword(String password) { this.password = password;}
-    public String getUsername() { return username; }
-    public void setUsername(String username) {this.username = username; }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
     public Role getRole() { return role; }
-    public void setRole(Role role) { this.role = role;}
-    public int getEnabled(){return enabled; }
-    public void setEnabled(int enabled){this.enabled = enabled;}
+
+    public void setRole(Role role) { this.role = role; }
 
     public void addToCart(Book book){ shoppingCart.addToCart(book);}
 
