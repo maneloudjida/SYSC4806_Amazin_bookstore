@@ -6,7 +6,6 @@
         <value>
           <list size="2">
             <item index="0" class="java.lang.String" itemvalue="th:action" />
-            <item index="1" class="java.lang.String" itemvalue="th:object" />
             <item index="1" class="java.lang.String" itemvalue="th:text" />
           </list>
         </value>
