@@ -1,6 +1,6 @@
-package Amazin.repository;
+package com.app.repository;
 
-import Amazin.entity.*;
+import com.app.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

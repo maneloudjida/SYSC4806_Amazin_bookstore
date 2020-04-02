@@ -1,9 +1,8 @@
-package Amazin.Controller;
+package com.app.Controller;
 
-import Amazin.entity.Book;
-import Amazin.entity.Cart;
-import Amazin.repository.BookRepository;
-import Amazin.repository.UserRepository;
+import com.app.entity.Book;
+import com.app.repository.BookRepository;
+import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

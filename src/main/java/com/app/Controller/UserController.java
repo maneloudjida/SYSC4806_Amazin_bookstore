@@ -1,8 +1,8 @@
-package Amazin.Controller;
+package com.app.Controller;
 
-import Amazin.entity.Role;
-import Amazin.entity.User;
-import Amazin.repository.UserRepository;
+import com.app.entity.Role;
+import com.app.entity.User;
+import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

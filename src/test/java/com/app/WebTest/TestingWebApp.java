@@ -1,4 +1,4 @@
-package Amazin.WebTest;
+package com.app.WebTest;
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;

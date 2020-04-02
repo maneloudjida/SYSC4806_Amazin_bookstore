@@ -1,6 +1,4 @@
-package Amazin.entity;
-
-import  org.assertj.core.api.Assert;
+package com.app.entity;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class BookTest

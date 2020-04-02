@@ -1,4 +1,4 @@
-package Amazin.entity;
+package com.app.entity;
 
 import javax.persistence.*;
 import java.util.Objects;
