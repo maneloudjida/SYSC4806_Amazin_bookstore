@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h2>There was a problem</h2>
+    <p>Your password is incorrect</p>
+</div>
+
+
+<form method="get" th:action="'/'">
+    <input type="submit" value="Go back" />
+</form>
+
+<form action="#" th:action="@{/signin}">
+    <button type="submit" id="signin">Try Again</button>
+</form>
+<form action="POST" th:action="@{/newUser}">
+    <input type="submit" value="Create a New Amazin account" />
+</form>
+
+</body>
+</html>

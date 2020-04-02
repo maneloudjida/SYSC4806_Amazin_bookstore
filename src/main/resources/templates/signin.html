@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amazin Sign in</title>
+</head>
+<body>
+
+
+
+<fieldset>
+    <form action="#" th:action="@{/signin}">
+
+        <p><label>Email: </label><input type="email" th:name="email" th:value="*{email}"  id="email"/></p>
+        <p><label>Password: </label><input type="password" th:name="password" id="password" /></p>
+
+        <button type="submit" id="signin">Sign In</button>
+
+    </form>
+</fieldset>
+</body>
+</html>

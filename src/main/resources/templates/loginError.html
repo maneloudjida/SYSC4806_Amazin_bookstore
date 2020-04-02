@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login error</title>
+</head>
+<body>
+<div>
+    <h2>There was a problem</h2>
+    <p>We cannot find an account with that e-mail address</p>
+</div>
+
+<form action="#" th:action="@{/signin}">
+    <button type="submit" id="signin">Try Again</button>
+</form>
+<form action="POST" th:action="@{/newUser}">
+    <input type="submit" value="Create your Amazin account" />
+</form>
+
+
+</body>
+</html>

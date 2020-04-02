@@ -5,6 +5,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<form method="get" th:action="'/logout'">
+    <button id="logout" type="submit" value="logout">Log out</button>
+</form>
+
 <fieldset>
 
 <form th:action="@{/getBook}" th:object="${newBook}" method="post">
@@ -28,9 +32,7 @@
     <button id="back" type="submit" value="Go back">Go Back</button>
 </form>
 
-<form method="get" th:action="'/signup'">
-    <button id="gotoSignup" type="submit" value="signup">sign up</button>
-</form>
+
 
 </body>
 </html>
