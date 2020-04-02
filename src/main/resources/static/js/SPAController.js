@@ -1,3 +1,4 @@
+
 var BookPopup = {
     setup: function() {
         // add hidden 'div' to end of page to display popup:
@@ -68,3 +69,4 @@ var BookPopup = {
 };
 
 $(BookPopup.setup);
+
