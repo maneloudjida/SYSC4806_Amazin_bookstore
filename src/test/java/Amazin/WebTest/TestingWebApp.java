@@ -21,6 +21,12 @@ public class TestingWebApp {
 
     @Autowired
     private MockMvc mockMvc;
+
+
+    @Test
+    public void contextTesting() throws Exception {
+    }
+
    /*
    @Autowired
 
