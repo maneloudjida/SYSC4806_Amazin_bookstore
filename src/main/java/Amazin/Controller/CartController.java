@@ -36,7 +36,7 @@ public class CartController {
     {
         Book b = books.findById(id).get();
         
-        User u = users.findByfname("Kyle");
+        User u = (User) users.findByemail("Kyle");
         u.addToCart(b);
 
         model.addAttribute("cartinfo", u.shoppingCart.toString());
