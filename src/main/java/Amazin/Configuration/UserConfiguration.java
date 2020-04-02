@@ -58,6 +58,6 @@ public class UserConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder a) throws Exception {
-        a.inMemoryAuthentication().withUser("Tareq").password("{noop}123").authorities("ROLE_USER", "ROLE_ADMIN");
+        a.inMemoryAuthentication().withUser("Admin").password("{noop}123").authorities("ROLE_USER", "ROLE_ADMIN");
     }
 }
