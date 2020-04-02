@@ -18,7 +18,7 @@ public class BookListController {
     @Autowired
     private UserRepository users;
 
-    @GetMapping("/")
+    @GetMapping("/getBooks")
     public String getBooks(Model model) {
         //model.addAttribute("shopCart");
 

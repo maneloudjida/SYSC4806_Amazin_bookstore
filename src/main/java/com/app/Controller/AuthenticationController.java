@@ -4,8 +4,10 @@ package com.app.Controller;
 import com.app.entity.User;
 import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -89,5 +91,9 @@ public class AuthenticationController {
         return "mainPage";
     }
 
+    @GetMapping(value="/")
+    public String index() {
 
+        return "landmark";
+    }
 }

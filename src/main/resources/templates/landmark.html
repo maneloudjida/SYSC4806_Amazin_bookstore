@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="../static/css/landmark.css" rel="stylesheet" th:href="@{/css/landmark.css}"/>
+
 </head>
-<body>
+
+    <body>
+
+        <h2>Welcome to Amazin </h2>
+
+        <h1 class="css-all-caps"> "Once you Learn to Read, you will be Forever FREE" </h1>
+        <p>-Frederick Douglass</p>
 
 
-<h2>Welcome to Amazin (This page will be Edited)</h2>
+        <form action="#" th:action="@{/signins}">
+            <button type="submit" id="signins">Sign In</button>
+        </form>
+        <form action="POST" th:action="@{/signup}">
+            <button type="submit" id="signup"> Create your Amazin account"</button>
+        </form>
 
-
-<form action="#" th:action="@{/signins}">
-    <button type="submit" id="signins">Sign In</button>
-</form>
-<form action="POST" th:action="@{/newUser}">
-    <input type="submit" value="Create your Amazin account" />
-</form>
-
-</body>
+    </body>
 </html>
