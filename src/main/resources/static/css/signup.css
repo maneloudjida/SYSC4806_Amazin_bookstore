@@ -1,0 +1,15 @@
+fieldset{
+ background-color: #D3D3D3;
+
+
+}
+
+
+background{
+ background-color: #D3D3D3;
+ background-image: url("../img/signup.jpg");
+ background-attachment: fixed;
+ background-position: 100% 0;
+ background-size: cover;
+ background-repeat: no-repeat;
+}

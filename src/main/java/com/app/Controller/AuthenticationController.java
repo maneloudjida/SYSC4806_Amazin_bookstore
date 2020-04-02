@@ -52,7 +52,6 @@ public class AuthenticationController {
         Only 1 email per user so list length should be 1
          */
         User u = users.get(0);
-
         /*
         Verify the password:
         If password wrong - launch error page with forgot password or signup link
@@ -61,6 +60,7 @@ public class AuthenticationController {
 
         if(u.getPassword().equals(password)){
             repository.save(u);
+            model.addAttribute( "UserProfile", u);
             return "mainPage";
         } else {
 
