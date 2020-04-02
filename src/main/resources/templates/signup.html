@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+<h1>Create account</h1>
+
+<form action="#" th:action="@{/}">
+    <input type="submit" value  = "Go Back"/>
+</form>
+<fieldset>
+    <form action="POST" th:action="@{/newUser}">
+
+        <p> <em>Please fill in the information in order to register</em></p>
+        <p><label>First Name: </label><input type="text" th:name="fname" th:value="*{fname}" placeholder="Enter your first name..." id="fname" /></p>
+        <p><label>Last Name: </label><input type="text" th:name="lname" th:value="*{lname}" placeholder="Enter your last name..." id="lname"/></p>
+        <p><label>Email: </label><input type="email" th:name="email" th:value="*{email}" placeholder="Enter your email..." id="email"/></p>
+        <p><label>Password: </label><input type="password" placeholder="Enter at least 6 characters..." th:name="password" th:value="*{password}" id="password" /></p>
+        <label>Role: </label>
+        <select id="role" th:name="role">
+            <option value="ROLE_CUSTOMER">Customer</option>
+            <option value="ROLE_BOOKSTOREOWNER">Vendor</option>
+        </select>
+        <br>
+        <input type="submit" href="/mainPage" value="Create your Amazin account" />
+
+    </form>
+</fieldset>
+
+</body>
+</html>
