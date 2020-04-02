@@ -5,9 +5,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<fieldset>
 
 <form th:action="@{/getBook}" th:object="${newBook}" method="post">
-    <fieldset>
         <p> <em>Please fill in the information of the book you would like to add: </em></p>
 
 
@@ -21,9 +21,9 @@
         <p><label>Description: </label><textarea rows="6" style="resize:none" placeholder="Enter the book's description" id="description" name="description" ></textarea></p>
 
     <button type="submit">Add</button>
-    </fieldset>
-
 </form>
+</fieldset>
+
 <form method="get" th:action="'/'">
     <button id="back" type="submit" value="Go back">Go Back</button>
 </form>
