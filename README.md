@@ -1,5 +1,9 @@
 # SYSC4806_Amazin_bookstore 
 
+### Status
+[![Build Status](https://travis-ci.org/maneloudjida/SYSC4806_Amazin_bookstore.svg?branch=master.png)](https://travis-ci.org/maneloudjida/SYSC4806_Amazin_bookstore.svg?branch=master)
+
+
 Team Noob Members:
 
  Rayhaan Dustagheer
