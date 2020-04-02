@@ -15,12 +15,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
-@AutoConfigureMockMvc
-@SpringBootTest
+//@SpringBootTest
 public class TestingWebApp {
 
-    @Autowired
-    private MockMvc mockMvc;
+   // @Autowired
+   // private MockMvc mockMvc;
 
 
     @Test
