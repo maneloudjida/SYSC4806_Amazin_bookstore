@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <h1>Add a New Book</h1>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
+<fieldset>
 <form th:action="@{/getBook}" th:object="${newBook}" method="post">
-    <p>Name: </p><input type="text" id="name" name="name" /><br>
-    <p>Description: </p><input type="text" id="description" name="description" /><br>
-    <p>Author: </p><input type="text" id="author" name="author" /><br>
-    <p>Publisher: </p><input type="text" id="publisher" name="publisher" /><br>
-    <p>Picture Link: </p><input type="text" id="picture" name="picture" /><br>
-    <p>ISBN: </p><input type="text" id="ISBN" name="ISBN" /><br>
-    <p>Cost: </p><input type="text" id="cost" name="cost" /><br>
-    <p>Stock: </p><input type="text" id="inventory" name="inventory" /><br>
-    <button type="submit">Add</button>
+
+        <p> <em>Please fill in the information of the book you would like to add</em></p>
+        <p><label>Title: </label><input type="text" placeholder="Enter the title of the book..." id="name" name="name" /></p>
+        <p><label>Author: </label><input type="text" placeholder="Enter the author's first and last name..."id="author" name="author" /></p>
+        <p><label>Publisher: </label><input type="text" placeholder="Enter the publisher..." id="publisher" name="publisher" /></p>
+        <p><label>ISBN: </label><input type="number" placeholder="Enter the International Standard Book  Number..." id="ISBN" name="ISBN" /></p>
+        <p><label>Picture Link: </label><input type="url" id="picture" name="picture" /></p>
+        <p><label>Cost: </label> <input type="number" name="cost" id="cost" placeholder="0.00"/></p>
+        <p><label>Stock: </label><input type="number" placeholder="0" id="inventory" name="inventory" /></p>
+        <p><label>Description: </label><textarea rows="6" style="resize:none" placeholder="Enter the book's description" id="description" name="description" ></textarea></p>
+        <button type="submit" id="ADD">Add</button>
+
 </form>
-<br><br><br>
+</fieldset>
+
+
 <form method="get" th:action="'/'">
-    <input type="submit" value="Go back" />
+    <button id="back" type="submit" value="Go back">Go Back</button>
 </form>
 </body>
 </html>

@@ -15,6 +15,8 @@ public class User {
 
     private String fname;
     private String lname;
+
+    @Column(unique = true)
     private String email;
     private String password;
 
@@ -81,6 +83,7 @@ public class User {
     public Role getRole() { return role; }
 
     public void setRole(Role role) { this.role = role; }
+
 
     public void addToCart(Book book){ shoppingCart.addToCart(book);}
 
