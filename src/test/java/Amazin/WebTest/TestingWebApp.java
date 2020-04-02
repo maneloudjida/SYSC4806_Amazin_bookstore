@@ -21,8 +21,9 @@ public class TestingWebApp {
 
     @Autowired
     private MockMvc mockMvc;
-    @Autowired
-  /*
+   /*
+   @Autowired
+
     @Test
     public void searchTest() throws Exception {
         this.mockMvc.perform(get("/search?name=face")).andDo(print()).andExpect(status().isOk())
