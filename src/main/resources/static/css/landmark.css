@@ -1,0 +1,77 @@
+body {
+ background-color: #D3D3D3;
+ background-image: url("../img/background2.jpg");
+ background-attachment: fixed;
+ background-position: 100% 0;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+img{
+position: absolute;
+
+image-repeat: no repeat;
+ background-attachment: fixed;
+ background-position: 100% 0;
+top:0;
+ background-size: cover;
+  z-index: -1;
+}
+
+
+
+h1.css-all-caps {
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 26px;
+letter-spacing: 1px;
+word-spacing: 0px;
+color: #000000;
+font-weight: 400;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+text-align:center;
+
+}
+
+p{
+text-align:center;
+
+}
+
+button{
+
+height:40px;
+  border-radius: 5px;
+position: center;
+background-color: #3B5998;
+color:white;
+font-weight:20px;
+font-size: 12px;
+}
+
+ #signup{
+      position:relative;
+      top:60px;
+      left:50%;
+      width:175px;
+  }
+
+  #signins{
+       position:relative;
+        top:100px;
+       left:40%;
+       width:75px;
+
+   }
+
+h2{
+       position:relative;
+        top:5px;
+       left:0%;
+       width:375px;
+	font:Palatino, URW Palladio L, serif;
+
+
+}
