@@ -1,4 +1,5 @@
 package com.app.Controller;
+import com.app.entity.Book;
 
 
 import com.app.entity.Role;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Cookie;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -69,6 +71,25 @@ public class AuthenticationController {
             model.addAttribute( "UserProfile", u);
 
             model.addAttribute("books", books.findAll());
+
+            List<Book> recommended = new ArrayList<Book>();
+            Iterable<Book> allBooks  = books.findAll();
+            for (Book b : u.purchases)
+            {
+                for (Book c : allBooks)
+                {
+                    if(b != c)
+                    {
+                        if (b.getAuthor() == c.getAuthor())
+                        {
+                            recommended.add(c);
+                        }
+                    }
+                }
+            }
+
+            model.addAttribute("recommendedbooks", recommended);
+
 
 
             if(u.getRole() == Role.ROLE_CUSTOMER){

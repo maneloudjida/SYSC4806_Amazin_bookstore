@@ -42,8 +42,13 @@ public class UserController {
 
 
 
-
+        model.addAttribute("userID", u.getId());
         model.addAttribute("books", books.findAll());
+
+
+
+
+
 
         if(u.getRole() == Role.ROLE_CUSTOMER){
             return "bookList";

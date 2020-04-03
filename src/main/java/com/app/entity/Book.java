@@ -20,6 +20,7 @@ public class Book {
     private int inventory;
     private double cost;
 
+
     public Book() {
     }
     public Book(String name, String description, String ISBN, String picture, String author, String publisher,
