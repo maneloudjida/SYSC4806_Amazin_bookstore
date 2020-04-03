@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/maneloudjida/SYSC4806_Amazin_bookstore.svg?branch=master.png)](https://travis-ci.org/maneloudjida/SYSC4806_Amazin_bookstore.svg?branch=master)
 
 
-#### *Team Noob Members:*
+*Team Noob Members:*
 
  - Rayhaan Dustagheer<br>
  - Tareq Hanafi<br>
@@ -13,14 +13,16 @@
  - Kyle Smith	<br>
 
 ------------------------------------------------------------------------------------------------------------
-###Background:
+*Background:*
 
 Build a Web Application, using the Spring MVC framework that will allow Bookstore Owner to upload and edit Book information and inventory. And Users will have the option to search, and browse through, the books in the bookstore. User have the option to decide to purchase one or many books by adding them in the Shopping Cart and proceeding to Checkout. 
 
 This web app named Amazin is a simulation of an online bookstore that is inspired by Amazon. 
 
 ------------------------------------------------------------------------------------------------------------
-###Packages descriptions
+
+*Packages descriptions*
+
 
 - Entity: represents a table in a database. Each entity instance corresponds to a row in that table such as book,user,cart...
 
@@ -31,7 +33,7 @@ This web app named Amazin is a simulation of an online bookstore that is inspire
 - Resources/Templates: All html pages, css and javascript that would be displayed
 
 ------------------------------------------------------------------------------------------------------------
-###Features:
+*Features:*
 
 - User can search, browse through the books in bookstore, sort and filter based on desired information.
 - User - Bookstore owner can add book, edit book and inventory
@@ -44,7 +46,7 @@ This web app named Amazin is a simulation of an online bookstore that is inspire
 - Show user book recommendations based on searches.
 
 ------------------------------------------------------------------------------------------------------------
-###Diagrams:
+*Diagrams:*
 
 - Database Diagram:
 ![](Diagrams/Databasediagram.png)
@@ -53,20 +55,20 @@ This web app named Amazin is a simulation of an online bookstore that is inspire
 ![](Diagrams/UMLDiagram.png)
 
 ------------------------------------------------------------------------------------------------------------
-###Setup:
+*Setup:*
 
 To access the heroku web app: [Amazin](https://sysc4806amazin.herokuapp.com)
 
 ------------------------------------------------------------------------------------------------------------
 
-###Milestones Breakdown
+*Milestones Breakdown:*
 
 Questions:
 1. what have I done this week? 
 2. what will I do next week? (only for milestone 1 & 2)
 
 -----------------------------------------------------------------------------
-Milestone 3 Task:
+*Milestone 3 Task:*
 
 *Mohammad Goolam Dustagheer*
 
@@ -83,7 +85,7 @@ Milestone 3 Task:
 
 --------
 
-Milestone 2 Task:
+*Milestone 2 Task:*
 
 *Mohammad Goolam Dustagheer*
 
@@ -108,7 +110,7 @@ Milestone 2 Task:
 
 ----------
 
-Milestone 1 Task:
+*Milestone 1 Task:*
 
 *Mohammad Goolam Dustagheer*
 
