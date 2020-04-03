@@ -96,4 +96,6 @@ public class AuthenticationController {
 
         return "landmark";
     }
+
+
 }
