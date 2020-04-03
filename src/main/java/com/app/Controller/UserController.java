@@ -36,7 +36,11 @@ public class UserController {
 
 
         repository.save(u);
-        return "mainPage";
+        if(u.getRole() == Role.ROLE_CUSTOMER){
+            return "bookList";
+        }else{return "bookListOWNER";}
+
+
     }
 
 }
