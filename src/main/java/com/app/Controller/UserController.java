@@ -36,7 +36,7 @@ public class UserController {
 
 
         repository.save(u);
-        return "mainPage";
+        return "bookList";
     }
 
 }
