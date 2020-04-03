@@ -15,10 +15,12 @@ class CartTest {
     @org.junit.jupiter.api.Test
     void addToCart() {
         Cart cart = new Cart();
-        Book b1 = new Book("face",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00);
-        Book b2 = new Book("faceful",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,550.00);
-        Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50);
-        Book b4 = new Book("facing",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,600.50);
+        Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00,"Fiction");
+        Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00,"Fiction");
+        Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50, "Fantasy");
+        Book b4 = new Book("facing",  "This book is facing", "ISBN","picture","Nnamdi","Nnamdi",1,600.50,"Romantic");
+
+
         cart.addToCart(b1);
         cart.addToCart(b2);
         cart.addToCart(b3);
@@ -38,10 +40,10 @@ class CartTest {
     @org.junit.jupiter.api.Test
     void printoutMethod() {
         Cart cart = new Cart();
-        Book b1 = new Book("face",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00);
-        Book b2 = new Book("faceful",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,550.00);
-        Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50);
-        Book b4 = new Book("facing",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,600.50);
+        Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00,"Fiction");
+        Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00,"Fiction");
+        Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50, "Fantasy");
+        Book b4 = new Book("facing",  "This book is facing", "ISBN","picture","Nnamdi","Nnamdi",1,600.50,"Romantic");
         cart.addToCart(b1);
         cart.addToCart(b2);
         String printing= "faceful \nface \n";
@@ -54,10 +56,10 @@ class CartTest {
     @org.junit.jupiter.api.Test
     void getTotal() {
         Cart cart = new Cart();
-        Book b1 = new Book("face",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00);
-        Book b2 = new Book("faceful",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,550.00);
-        Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50);
-        Book b4 = new Book("facing",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,600.50);
+        Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00,"Fiction");
+        Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00,"Fiction");
+        Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50, "Fantasy");
+        Book b4 = new Book("facing",  "This book is facing", "ISBN","picture","Nnamdi","Nnamdi",1,600.50,"Romantic");
         cart.addToCart(b1);
         cart.addToCart(b2);
         cart.addToCart(b3);
