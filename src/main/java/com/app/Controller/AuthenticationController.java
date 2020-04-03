@@ -2,6 +2,7 @@ package com.app.Controller;
 
 
 import com.app.entity.User;
+import com.app.repository.BookRepository;
 import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -20,6 +21,8 @@ import java.util.List;
 @Controller
 public class AuthenticationController {
 
+    @Autowired
+    private BookRepository books;
 
     private UserRepository repository;
     private int nextSession = 0;
@@ -63,6 +66,7 @@ public class AuthenticationController {
         if(u.getPassword().equals(password)){
             repository.save(u);
             model.addAttribute( "UserProfile", u);
+            model.addAttribute("books", books.findAll());
             return "bookList";
         } else {
 

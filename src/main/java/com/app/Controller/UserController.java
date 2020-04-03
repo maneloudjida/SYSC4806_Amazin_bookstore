@@ -39,7 +39,11 @@ public class UserController {
 
 
         repository.save(u);
+
+
+
         model.addAttribute("books", books.findAll());
+
         return "bookList";
     }
 

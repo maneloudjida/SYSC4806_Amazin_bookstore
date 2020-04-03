@@ -1,6 +1,8 @@
 package com.app.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +14,9 @@ public class User {
 
     @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     public Cart shoppingCart;//will change to private later
+
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    public List<Book> purchases = new ArrayList<>();
 
     private String fname;
     private String lname;
