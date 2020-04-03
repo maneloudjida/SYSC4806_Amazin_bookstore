@@ -70,7 +70,7 @@ public class AuthenticationController {
             }else{return "bookListOWNER";}
 
 
-            return "bookList";
+            //return "bookList";
 
         } else {
 
@@ -85,7 +85,7 @@ public class AuthenticationController {
                          HttpServletResponse response){
 
         response.addCookie(new Cookie("sessionId",null));
-        return "signin";
+        return "landmark";
     }
 
 
@@ -104,4 +104,6 @@ public class AuthenticationController {
 
         return "landmark";
     }
+
+
 }
