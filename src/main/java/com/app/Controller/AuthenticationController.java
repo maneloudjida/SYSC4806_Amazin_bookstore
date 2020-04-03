@@ -70,7 +70,7 @@ public class AuthenticationController {
             }else{return "bookListOWNER";}
 
 
-            return "bookList";
+            //return "bookList";
 
         } else {
 

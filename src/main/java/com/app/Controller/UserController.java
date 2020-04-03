@@ -45,8 +45,8 @@ public class UserController {
         }else{return "bookListOWNER";}
 
 
-        model.addAttribute("books", books.findAll());
-        return "bookList";
+   //     model.addAttribute("books", books.findAll());
+     //   return "bookList";
     }
 
 }
