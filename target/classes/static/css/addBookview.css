@@ -1,0 +1,73 @@
+
+
+h1{
+font-family: Impact, Charcoal, sans-serif;
+
+
+}
+
+input, textarea {
+  background-color: #D3D3D3;
+  color: #2F4F4F;
+  width: 400px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 2px 2px #696969;
+  position: relative;
+
+}
+
+
+
+fieldset{
+  background: beige;
+  border: 5px solid black;
+  position: absolute;
+  right:20px;
+  width:400px;
+  box-shadow: 5px 5px 2px 2px #696969;
+  padding-bottom: 150px;
+  height: 525px;
+
+}
+
+
+body {
+ background-color: #D3D3D3;
+ background-image: url("../img/background_add.jpg");
+ background-attachment: fixed;
+ background-position: 100% 0;
+ background-size: cover;
+ background-repeat: no-repeat;
+
+}
+
+body p em{
+   position: relative;
+    right:10px;
+
+}
+
+label{
+      font-weight: bold;
+      font-size: 16px;
+      float: left;
+      width: 10em;
+      margin-right: 1em;
+
+}
+
+fieldset button{
+  background-color: #B22222;
+  height: 30px;
+  width: 20%;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+#back{
+    position: absolute;
+    top: 725px;
+}
+
+
+

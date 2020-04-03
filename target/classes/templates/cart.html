@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart page</title>
+</head>
+<body>
+<p th:text="${cartinfo} +'-----'"> </p>
+
+<form method="get" th:action="'/'">
+    <input type="submit" value="Go back" />
+</form>
+</body>
+</html>

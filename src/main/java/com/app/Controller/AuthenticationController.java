@@ -64,9 +64,13 @@ public class AuthenticationController {
         if(u.getPassword().equals(password)){
             repository.save(u);
             model.addAttribute( "UserProfile", u);
+
             if(u.getRole() == Role.ROLE_CUSTOMER){
                 return "bookList";
             }else{return "bookListOWNER";}
+
+
+            return "bookList";
 
         } else {
 
