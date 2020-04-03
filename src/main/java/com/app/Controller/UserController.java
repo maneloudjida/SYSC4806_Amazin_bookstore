@@ -39,6 +39,12 @@ public class UserController {
 
 
         repository.save(u);
+
+        if(u.getRole() == Role.ROLE_CUSTOMER){
+            return "bookList";
+        }else{return "bookListOWNER";}
+
+
         model.addAttribute("books", books.findAll());
         return "bookList";
     }

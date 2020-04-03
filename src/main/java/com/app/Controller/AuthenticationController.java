@@ -1,6 +1,7 @@
 package com.app.Controller;
 
 
+import com.app.entity.Role;
 import com.app.entity.User;
 import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +64,14 @@ public class AuthenticationController {
         if(u.getPassword().equals(password)){
             repository.save(u);
             model.addAttribute( "UserProfile", u);
+
+            if(u.getRole() == Role.ROLE_CUSTOMER){
+                return "bookList";
+            }else{return "bookListOWNER";}
+
+
             return "bookList";
+
         } else {
 
             model.addAttribute("message", "Password incorrect");
