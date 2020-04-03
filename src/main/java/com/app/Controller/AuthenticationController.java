@@ -63,7 +63,7 @@ public class AuthenticationController {
         if(u.getPassword().equals(password)){
             repository.save(u);
             model.addAttribute( "UserProfile", u);
-            return "mainPage";
+            return "bookList";
         } else {
 
             model.addAttribute("message", "Password incorrect");

@@ -20,7 +20,6 @@ Build a Web Application, using the Spring MVC framework that will allow Bookstor
 This web app named Amazin is a simulation of an online bookstore that is inspired by Amazon. 
 
 ------------------------------------------------------------------------------------------------------------
-
 ###Packages descriptions
 
 - Entity: represents a table in a database. Each entity instance corresponds to a row in that table such as book,user,cart...
@@ -133,8 +132,5 @@ Milestone 1 Task:
 *Kyle Smith*
 1. Setup the project as a springbootapplication, made the landing page, add book page, view book page, and their controllers. Also fixed annotations on the repos to make them CRUD.
 2. Restrict the add book page to only the owner user, add additional functionality to the view book page for owners, possibly implement a search bar on the booklist/home page.
-
-
-
 
 ------------------------------------------------------------------------------------------------------------
