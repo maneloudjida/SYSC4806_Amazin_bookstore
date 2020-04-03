@@ -1,7 +1,6 @@
-package Amazin.repository;
+package com.app.repository;
 
-import Amazin.entity.Cart;
-import Amazin.entity.User;
+import com.app.entity.Cart;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

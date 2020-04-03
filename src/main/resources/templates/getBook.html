@@ -2,12 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <h1>Add a New Book</h1>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="../static/css/addBookview.css" rel="stylesheet" th:href="@{/css/addBookview.css}"/>
+
 </head>
 <body>
+<form method="get" th:action="'/logout'">
+    <button id="logout" type="submit" value="logout">Log out</button>
+</form>
+
+<fieldset>
 
 <form th:action="@{/getBook}" th:object="${newBook}" method="post">
-    <fieldset>
         <p> <em>Please fill in the information of the book you would like to add: </em></p>
 
 
@@ -16,16 +21,19 @@
         <p><label>Publisher: </label><input type="text" placeholder="Enter the publisher..." id="publisher" name="publisher" /></p>
         <p><label>ISBN: </label><input type="number" placeholder="Enter the International Standard Book  Number..." id="ISBN" name="ISBN" /></p>
         <p><label>Picture Link: </label><input type="url" id="picture" name="picture" /></p>
-        <p><label>Cost: </label> <input type="text" name="cost" id="cost" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$0.00"/></p>
+        <p><label>Cost: </label> <input type="number" name="cost" id="cost" placeholder="0.00"/></p>
         <p><label>Stock: </label><input type="number" placeholder="0" id="inventory" name="inventory" /></p>
         <p><label>Description: </label><textarea rows="6" style="resize:none" placeholder="Enter the book's description" id="description" name="description" ></textarea></p>
 
     <button type="submit">Add</button>
-    </fieldset>
-
 </form>
+</fieldset>
+
 <form method="get" th:action="'/'">
     <button id="back" type="submit" value="Go back">Go Back</button>
 </form>
+
+
+
 </body>
 </html>

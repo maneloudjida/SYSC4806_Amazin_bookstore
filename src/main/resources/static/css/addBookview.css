@@ -33,7 +33,7 @@ fieldset{
 
 body {
  background-color: #D3D3D3;
- background-image: url("background_add.jpg");
+ background-image: url("../img/background_add.jpg");
  background-attachment: fixed;
  background-position: 100% 0;
  background-size: cover;

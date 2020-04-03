@@ -1,6 +1,5 @@
-package Amazin.entity;
+package com.app.entity;
 
-import javax.persistence.Entity;
 
 
 public enum Role {

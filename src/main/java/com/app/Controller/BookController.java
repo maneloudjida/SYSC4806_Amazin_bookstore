@@ -1,15 +1,13 @@
-package Amazin.Controller;
+package com.app.Controller;
 
-import Amazin.entity.Book;
+import com.app.entity.Book;
+import com.app.repository.BookRepository;
+import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import Amazin.repository.BookRepository;
-import Amazin.repository.UserRepository;
-
-import java.util.List;
 
 @Controller
 public class BookController {
@@ -18,6 +16,7 @@ public class BookController {
     private BookRepository books;
     @Autowired
     private UserRepository userRepository;
+
     @GetMapping("/book")
     public String getBook(@ModelAttribute("id") Integer id, Model model)
     {
