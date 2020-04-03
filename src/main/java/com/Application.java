@@ -30,11 +30,11 @@ public class Application {
             users.save(Customer);
 
             //save a few books
-            Book memeBook = new Book("The Library Book","A book about memes","11100010011","https://images-na.ssl-images-amazon.com/images/I/51pmJwGu0bL._SX340_BO1,204,203,200_.jpg","Kyle","Rayhaan",1,50);
-            Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00);
-            Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00);
-            Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50);
-            Book b4 = new Book("facing",  "This book is facing", "ISBN","picture","Nnamdi","Nnamdi",1,600.50);
+            Book memeBook = new Book("The Library Book","A book about memes","11100010011","https://images-na.ssl-images-amazon.com/images/I/51pmJwGu0bL._SX340_BO1,204,203,200_.jpg","Kyle","Rayhaan",1,50,"Mystery");
+            Book b1 = new Book("face", "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.00,"Fiction");
+            Book b2 = new Book("faceful", "This book is faceful", "ISBN","picture","Nnamdi","Nnamdi",1,550.00,"Fiction");
+            Book b3 = new Book("faceless",  "This book is faceless", "ISBN","picture","Nnamdi","Nnamdi",1,500.50, "Fantasy");
+            Book b4 = new Book("facing",  "This book is facing", "ISBN","picture","Nnamdi","Nnamdi",1,600.50,"Romantic");
 
             books.save(memeBook);
             books.save(b1);

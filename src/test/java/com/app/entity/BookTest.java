@@ -8,7 +8,7 @@ public class BookTest
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        this.book= new Book("Hello World", "Fairy Tale", "222", "picture", "Rayhaan", "Ray",3, 50.00);
+        this.book= new Book("Hello World", "Fairy Tale", "222", "picture", "Rayhaan", "Ray",3, 50.00,"Fantasy");
     }
 
     @org.junit.jupiter.api.AfterEach

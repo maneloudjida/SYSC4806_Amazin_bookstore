@@ -19,12 +19,13 @@ public class Book {
     private String publisher;
     private int inventory;
     private double cost;
+    private String genre;
 
 
     public Book() {
     }
     public Book(String name, String description, String ISBN, String picture, String author, String publisher,
-                int inventory, double cost) {
+                int inventory, double cost, String genre) {
         this.name = name;
         this.description = description;
         this.ISBN = ISBN;
@@ -33,6 +34,8 @@ public class Book {
         this.publisher = publisher;
         this.inventory = inventory;
         this.cost = cost;
+        this.genre = genre;
+
     }
     @Override
     public int hashCode() {
@@ -49,6 +52,8 @@ public class Book {
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((picture == null) ? 0 : picture.hashCode());
         result = prime * result + ((publisher == null) ? 0 : publisher.hashCode());
+        result = prime * result + ((genre == null) ? 0 : genre.hashCode());
+
         return result;
     }
 
@@ -95,12 +100,20 @@ public class Book {
                 return false;
         } else if (!picture.equals(other.picture))
             return false;
+        if (genre == null) {
+            if (other.genre != null)
+                return false;
+        } else if (!genre.equals(other.genre))
+            return false;
         if (publisher == null) {
             if (other.publisher != null)
                 return false;
         } else if (!publisher.equals(other.publisher))
             return false;
         return true;
+
+
+
     }
     public Integer getId() {
         return id;
@@ -157,6 +170,12 @@ public class Book {
         this.cost = cost;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+    public void setGenre(String genre) {
+        genre = genre;
+    }
 
 
 }
