@@ -21,23 +21,10 @@
     <br><br>
 </tr>
 
-
-<p>-----Recommended For You-----</p><br>
-
-<tr class="Book" th:each="book: ${recommendedbooks}">
-    <td> Name: </td>
-    <td th:text="${book.name}" /><br>
-    <td> ID: </td>
-    <td th:text="${book.id}" /><br>
-    <form  method="get" th:action="'/book'">
-        <input type="hidden" name="id" th:value="${book.id}">
-        <input class="book" type="submit" value="select book" />
-    </form>
-    <br><br>
-</tr>
-
 <form class="addbook" method="get" th:action="'/getBook'">
-
+    <input type="submit" value="Add Book" />
+</form>
+<br>
 <form class="searchBook" method="get" th:action="'/search'">
     <input type="text" id="name" name="name" />
     <input type="submit" value="Search" placeholder="Search.."/>
@@ -46,10 +33,6 @@
 <form method="get" th:action="'/getBooks'">
     <input type="submit" value="Go back" />
 </form>
-<form method="get" th:action="'/logout'">
-    <input type="submit" value="logout" />
-</form>
-
 
 <br><br>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

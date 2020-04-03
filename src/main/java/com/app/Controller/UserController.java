@@ -42,9 +42,15 @@ public class UserController {
 
 
 
+
         model.addAttribute("books", books.findAll());
 
-        return "bookList";
+        if(u.getRole() == Role.ROLE_CUSTOMER){
+            return "bookList";
+        }else{return "bookListOWNER";}
+
+
+
     }
 
 }

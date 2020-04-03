@@ -1,6 +1,7 @@
 package com.app.Controller;
 
 
+import com.app.entity.Role;
 import com.app.entity.User;
 import com.app.repository.BookRepository;
 import com.app.repository.UserRepository;
@@ -66,8 +67,14 @@ public class AuthenticationController {
         if(u.getPassword().equals(password)){
             repository.save(u);
             model.addAttribute( "UserProfile", u);
+
             model.addAttribute("books", books.findAll());
-            return "bookList";
+
+
+            if(u.getRole() == Role.ROLE_CUSTOMER){
+                return "bookList";
+            }else{return "bookListOWNER";}
+
         } else {
 
             model.addAttribute("message", "Password incorrect");
@@ -81,7 +88,7 @@ public class AuthenticationController {
                          HttpServletResponse response){
 
         response.addCookie(new Cookie("sessionId",null));
-        return "signin";
+        return "landmark";
     }
 
 
@@ -100,4 +107,6 @@ public class AuthenticationController {
 
         return "landmark";
     }
+
+
 }

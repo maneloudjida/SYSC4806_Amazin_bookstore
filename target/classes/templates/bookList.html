@@ -5,13 +5,15 @@
     <title>Amazin Book Store</title>
 </head>
 <body>
-<p>-----Books-----</p><br>
+<p>-----Books-----</p>
+<h6>Press go back button if no books on display</h6>
 
 <tr class="Book" th:each="book: ${books}">
     <td> Name: </td>
     <td th:text="${book.name}" /><br>
     <td> ID: </td>
     <td th:text="${book.id}" /><br>
+
     <form  method="get" th:action="'/book'">
         <input type="hidden" name="id" th:value="${book.id}">
         <input class="book" type="submit" value="select book" />
@@ -19,6 +21,7 @@
     <br><br>
 </tr>
 
+<<<<<<< HEAD
 <p>-----Recommended For You-----</p><br>
 
 <tr class="Book" th:each="book: ${recommendedbooks}">
@@ -34,17 +37,24 @@
 </tr>
 
 <form class="addbook" method="get" th:action="'/getBook'">
+=======
+<!--<form class="addbook" method="get" th:action="'/getBook'">
+>>>>>>> 008b6d41bc76e18ac2f3b708d97965fd476f9269
     <input type="submit" value="Add Book" />
 </form>
-<br>
+<br>-->
 <form class="searchBook" method="get" th:action="'/search'">
     <input type="text" id="name" name="name" />
     <input type="submit" value="Search" placeholder="Search.."/>
 </form>
 <br>
-<form method="get" th:action="'/'">
+<form method="get" th:action="'/getBooks'">
     <input type="submit" value="Go back" />
 </form>
+<form method="get" th:action="'/logout'">
+    <input type="submit" value="logout" />
+</form>
+
 
 <br><br>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
