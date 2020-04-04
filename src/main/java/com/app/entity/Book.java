@@ -174,7 +174,7 @@ public class Book {
         return genre;
     }
     public void setGenre(String genre) {
-        genre = genre;
+        this.genre = genre;
     }
 
 

@@ -68,7 +68,6 @@ public class AuthenticationController {
 
         if(u.getPassword().equals(password)){
             repository.save(u);
-            model.addAttribute( "UserProfile", u);
 
             model.addAttribute("books", books.findAll());
 
@@ -78,23 +77,23 @@ public class AuthenticationController {
             {
                 for (Book c : allBooks)
                 {
-                    if(b != c)
+                    if(b != c && !u.purchases.contains(c) && !recommended.contains(c))
                     {
-                        if (b.getAuthor() == c.getAuthor())
+                        if (b.getAuthor() == c.getAuthor() || b.getGenre() == c.getGenre())
                         {
                             recommended.add(c);
                         }
                     }
                 }
             }
-
+            model.addAttribute("role",u.getRole().toString());
             model.addAttribute("recommendedbooks", recommended);
+            model.addAttribute("userID",u.getId());
 
 
 
-            if(u.getRole() == Role.ROLE_CUSTOMER){
                 return "bookList";
-            }else{return "bookListOWNER";}
+
 
         } else {
 

@@ -35,6 +35,7 @@
         <input type="submit" value="Add To Cart" />
     </form>
     <form method="get" th:action="'/getBooks'">
+        <input type="hidden" name="userID" th:value="${userID}">
         <input type="submit" value="Go back" />
     </form>
 

@@ -38,16 +38,32 @@
     <br><br>
 </tr>
 
-<form class="addbook" method="get" th:action="'/getBook'">
+
 
 <form class="searchBook" method="get" th:action="'/search'">
     <input type="text" id="name" name="name" />
+    <input type ="hidden" name="userID" th:value="${userID}">
     <input type="submit" value="Search" placeholder="Search.."/>
 </form>
 <br>
+<td th:if="${role == 'ROLE_BOOKSTOREOWNER'}">
+<form class="addbook" method="get" th:action="'/getBook'">
+    <input type ="hidden" name="userID" th:value="${userID}">
+    <input type="submit" value="Add Book" />
+</form>
+</td>
 <form method="get" th:action="'/getBooks'">
+    <input type="hidden" name="userID" th:value="${userID}">
     <input type="submit" value="Go back" />
 </form>
+<form method="get" th:action="'/cart'">
+    <input type ="hidden" name="userID" th:value="${userID}">
+    <input type="submit" value="Go to cart" />
+</form>
+    <form method="get" th:action="'/purchased'">
+        <input type ="hidden" name="userID" th:value="${userID}">
+        <input type="submit" value="Purchase History" />
+    </form>
 <form method="get" th:action="'/logout'">
     <input type="submit" value="logout" />
 </form>
