@@ -6,7 +6,7 @@
 </head>
 <body>
 <p>-----Books-----</p>
-<h6>Press go back button if no books on display</h6>
+
 
 <tr class="Book" th:each="book: ${books}">
     <td> Name: </td>
@@ -16,23 +16,54 @@
 
     <form  method="get" th:action="'/book'">
         <input type="hidden" name="id" th:value="${book.id}">
+        <input type ="hidden" name="userID" th:value="${userID}">
         <input class="book" type="submit" value="select book" />
     </form>
     <br><br>
 </tr>
 
-<!--<form class="addbook" method="get" th:action="'/getBook'">
-    <input type="submit" value="Add Book" />
-</form>
-<br>-->
+
+<p>-----Recommended For You-----</p><br>
+
+<tr class="Book" th:each="book: ${recommendedbooks}">
+    <td> Name: </td>
+    <td th:text="${book.name}" /><br>
+    <td> ID: </td>
+    <td th:text="${book.id}" /><br>
+    <form  method="get" th:action="'/book'">
+        <input type="hidden" name="id" th:value="${book.id}">
+        <input type ="hidden" name="userID" th:value="${userID}">
+        <input class="book" type="submit" value="select book" />
+    </form>
+    <br><br>
+</tr>
+
+
+
 <form class="searchBook" method="get" th:action="'/search'">
     <input type="text" id="name" name="name" />
+    <input type ="hidden" name="userID" th:value="${userID}">
     <input type="submit" value="Search" placeholder="Search.."/>
 </form>
 <br>
+<td th:if="${role == 'ROLE_BOOKSTOREOWNER'}">
+<form class="addbook" method="get" th:action="'/getBook'">
+    <input type ="hidden" name="userID" th:value="${userID}">
+    <input type="submit" value="Add Book" />
+</form>
+</td>
 <form method="get" th:action="'/getBooks'">
+    <input type="hidden" name="userID" th:value="${userID}">
     <input type="submit" value="Go back" />
 </form>
+<form method="get" th:action="'/cart'">
+    <input type ="hidden" name="userID" th:value="${userID}">
+    <input type="submit" value="Go to cart" />
+</form>
+    <form method="get" th:action="'/purchased'">
+        <input type ="hidden" name="userID" th:value="${userID}">
+        <input type="submit" value="Purchase History" />
+    </form>
 <form method="get" th:action="'/logout'">
     <input type="submit" value="logout" />
 </form>

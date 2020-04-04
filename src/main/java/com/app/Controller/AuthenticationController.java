@@ -1,8 +1,10 @@
 package com.app.Controller;
+import com.app.entity.Book;
 
 
 import com.app.entity.Role;
 import com.app.entity.User;
+import com.app.repository.BookRepository;
 import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -16,11 +18,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Cookie;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class AuthenticationController {
 
+    @Autowired
+    private BookRepository books;
 
     private UserRepository repository;
     private int nextSession = 0;
@@ -63,14 +68,32 @@ public class AuthenticationController {
 
         if(u.getPassword().equals(password)){
             repository.save(u);
-            model.addAttribute( "UserProfile", u);
 
-            if(u.getRole() == Role.ROLE_CUSTOMER){
+            model.addAttribute("books", books.findAll());
+
+            List<Book> recommended = new ArrayList<Book>();
+            Iterable<Book> allBooks  = books.findAll();
+            for (Book b : u.purchases)
+            {
+                for (Book c : allBooks)
+                {
+                    if(b != c && !u.purchases.contains(c) && !recommended.contains(c))
+                    {
+                        if (b.getAuthor() == c.getAuthor() || b.getGenre() == c.getGenre())
+                        {
+                            recommended.add(c);
+                        }
+                    }
+                }
+            }
+            model.addAttribute("role",u.getRole().toString());
+            model.addAttribute("recommendedbooks", recommended);
+            model.addAttribute("userID",u.getId());
+
+
+
                 return "bookList";
-            }else{return "bookListOWNER";}
 
-
-            //return "bookList";
 
         } else {
 

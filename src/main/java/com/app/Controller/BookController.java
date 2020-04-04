@@ -18,10 +18,11 @@ public class BookController {
     private UserRepository userRepository;
 
     @GetMapping("/book")
-    public String getBook(@ModelAttribute("id") Integer id, Model model)
+    public String getBook(@ModelAttribute("id") Integer id, @ModelAttribute("userID") Integer uid, Model model)
     {
         Book bb = books.findById(id).get();
         model.addAttribute("book",bb);
+        model.addAttribute("userID",uid);
         return "book";
     }
 

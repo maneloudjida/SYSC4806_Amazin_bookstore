@@ -42,7 +42,7 @@ public class Application {
             books.save(b3);
             books.save(b4);
 
-
+            User demo = new User("Demo","Smith","demo@fake.com","123456", Role.ROLE_CUSTOMER);
 
         };
     }

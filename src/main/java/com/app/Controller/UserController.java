@@ -17,6 +17,7 @@ public class UserController {
     @Autowired
     UserRepository repository;
 
+
     @RequestMapping("/signup")
     public String index(Model model) {
         return "signup";
@@ -40,13 +41,22 @@ public class UserController {
 
         repository.save(u);
 
-        if(u.getRole() == Role.ROLE_CUSTOMER){
-            return "bookList";
-        }else{return "bookListOWNER";}
+
+        model.addAttribute("role",u.getRole().toString());
+        model.addAttribute("userID", u.getId());
+        model.addAttribute("books", books.findAll());
 
 
-   //     model.addAttribute("books", books.findAll());
-     //   return "bookList";
+
+
+
+
+
+        return "bookList";
+
+
+
+
     }
 
 }

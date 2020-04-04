@@ -21,6 +21,7 @@ public class Book {
     private double cost;
     private String genre;
 
+
     public Book() {
     }
     public Book(String name, String description, String ISBN, String picture, String author, String publisher,
@@ -173,7 +174,7 @@ public class Book {
         return genre;
     }
     public void setGenre(String genre) {
-        genre = genre;
+        this.genre = genre;
     }
 
 

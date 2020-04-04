@@ -1,6 +1,10 @@
 package com.app.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -10,8 +14,11 @@ public class User {
     @GeneratedValue
     private Integer id;
 
-    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    public Cart shoppingCart;//will change to private later
+    @OneToMany(fetch = FetchType.EAGER)
+    public List<Book> shoppingCart = new ArrayList<Book>();;//will change to private later
+
+    @OneToMany()
+    public List<Book> purchases = new ArrayList<Book>();
 
     private String fname;
     private String lname;
@@ -22,6 +29,7 @@ public class User {
     private Role role;
 
     public User() {
+
     }
     public User(String fname, String lname, String email, String password, Role role) {
         this.fname = fname;
@@ -29,7 +37,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.role = role;
-        shoppingCart = new Cart();
+
     }
 
     @Override
@@ -82,6 +90,14 @@ public class User {
 
     public void setRole(Role role) { this.role = role; }
 
-    public void addToCart(Book book){ shoppingCart.addToCart(book);}
+    public double getCartTotal()
+    {
+        double retVal = 0;
+        for (Book b : shoppingCart)
+        {
+            retVal += b.getCost();
+        }
+        return retVal;
+    }
 
 }

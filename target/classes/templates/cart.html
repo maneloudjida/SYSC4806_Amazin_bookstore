@@ -5,9 +5,33 @@
     <title>Cart page</title>
 </head>
 <body>
-<p th:text="${cartinfo} +'-----'"> </p>
+<h1>Your Shopping Cart</h1><br>
+<tr class="Book" th:each="book: ${books}">
+    <td> Name: </td>
+    <td th:text="${book.name}" /><br>
+    <td> Price: </td>
+    <td th:text="${book.cost}" /><br>
+    <td> ID: </td>
+    <td th:text="${book.id}" /><br>
 
-<form method="get" th:action="'/'">
+    <form  method="post" th:action="'/removeFromCart'">
+        <input type="hidden" name="id" th:value="${book.id}">
+        <input type ="hidden" name="userID" th:value="${userID}">
+        <input class="book" type="submit" value="Remove Book" />
+    </form>
+    <br><br>
+</tr>
+<tr>
+    <td>Total: $</td><td th:text="${totalCost}"/><br>
+    <form  method="post" th:action="'/purchase'">
+        <input type ="hidden" name="userID" th:value="${userID}">
+        <input class="book" type="submit" value="Purchase" />
+    </form>
+</tr>
+
+
+<form method="get" th:action="'/getBooks'">
+    <input type ="hidden" name="userID" th:value="${userID}">
     <input type="submit" value="Go back" />
 </form>
 </body>
