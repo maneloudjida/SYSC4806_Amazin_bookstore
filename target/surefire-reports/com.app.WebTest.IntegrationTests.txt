@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.app.WebTest.IntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.956 s - in com.app.WebTest.IntegrationTests

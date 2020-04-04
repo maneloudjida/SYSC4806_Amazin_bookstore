@@ -1,9 +1,7 @@
 com\app\Controller\UserController.class
 com\app\Controller\AuthenticationController.class
-com\app\entity\Cart.class
 com\app\Controller\CartController.class
 com\app\Controller\BookListController.class
-com\app\repository\CartRepository.class
 com\app\repository\BookRepository.class
 com\app\repository\UserRepository.class
 com\app\entity\Role.class
